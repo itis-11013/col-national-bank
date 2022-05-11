@@ -1,0 +1,42 @@
+package ru.itis.sem_col.models;
+
+import lombok.Getter;
+import lombok.Setter;
+import ru.itis.sem_col.models.composite.InnerProduct;
+
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+@Table(name = "product")
+@Getter
+@Setter
+@IdClass(InnerProduct.class)
+public class Product implements Serializable {
+    @Id
+//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dictGen")
+//    @SequenceGenerator(name = "dictGen", sequenceName = "dictionary_seq", allocationSize = 1)
+    private Long id;
+
+    @Id
+    @Basic(optional = true)
+    private Long innerId;
+
+    private String code;
+
+    private String name;
+
+    private String unit;
+
+    @ManyToOne
+    //@JoinColumn(name = "organization_ID")
+    @JoinColumns({
+            @JoinColumn(name = "organization_ID"),
+            @JoinColumn(name = "country_id")
+    })
+    private Organization organization;
+
+    private Long price;
+
+    private Integer count;
+}
