@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/migrations/V1_create_tables.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/migrations/V2_add_units.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/migrations/V3_add_products.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/Config.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +120,7 @@
       <workItem from="1651939288692" duration="736000" />
       <workItem from="1652251550850" duration="2976000" />
       <workItem from="1652255508324" duration="8158000" />
-      <workItem from="1652360690285" duration="3811000" />
+      <workItem from="1652360690285" duration="4852000" />
     </task>
     <servers />
   </component>
