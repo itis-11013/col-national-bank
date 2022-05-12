@@ -26,7 +26,10 @@ public class Product implements Serializable {
 
     private String name;
 
-    private String unit;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "unit_id")
+    private Units unit;
 
     @ManyToOne
     //@JoinColumn(name = "organization_ID")
