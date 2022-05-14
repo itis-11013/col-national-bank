@@ -16,7 +16,7 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
-
+// probango git
     @Autowired
     @Qualifier("myOrganizationDetailService")
     private OrganizationDetailService myOrganizationDetailService;
