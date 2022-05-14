@@ -14,7 +14,7 @@ public class OrganizationDetailImple implements UserDetails {
     public OrganizationDetailImple(Organization organization) {
         this.organization = organization;
 
-        //System.out.println(organization != null ? (organization.getName()  +  ":" + new BCryptPasswordEncoder().matches("admin", organization.getPassword())): "user not found");
+        System.out.println(organization != null ? (organization.getName()  +  ":" + new BCryptPasswordEncoder().matches("admin", organization.getPassword())): "user not found");
     }
 
     public Organization getOrganization() {

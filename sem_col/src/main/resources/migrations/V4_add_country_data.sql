@@ -1,0 +1,1 @@
+INSERT INTO public.country (id, code, name) VALUES (1::bigint, 'COL'::varchar(255), 'Colombia'::varchar(255))
