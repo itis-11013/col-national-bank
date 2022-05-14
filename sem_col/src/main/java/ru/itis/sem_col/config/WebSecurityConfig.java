@@ -22,6 +22,7 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     private OrganizationDetailService myOrganizationDetailService;
 
     @Autowired
+    \
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(myOrganizationDetailService).passwordEncoder(passwordEncoder());
