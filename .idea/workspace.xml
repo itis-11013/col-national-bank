@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="probando git">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/LoginFormDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +86,7 @@
       <recent name="$PROJECT_DIR$/sem_col/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.OrganizationTest">
+  <component name="RunManager" selected="Spring Boot.SemColApplication">
     <configuration name="OrganizationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.OrganizationTest" />
       <module name="sem_col" />
@@ -168,7 +168,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/kevinchanges" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
