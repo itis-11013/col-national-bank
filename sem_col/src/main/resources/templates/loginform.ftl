@@ -7,7 +7,13 @@
     <title>Organization Login Form Spring Security</title>
 
     <link rel='stylesheet' href='/resources/css/lab10.css'>
-    <script src='/resources/js/lab10.js'></script>
+<#--    <script src='/resources/js/lab10.js'></script>-->
+    <script>
+        function validate(){
+            alert('Ok')
+            return true;
+        }
+    </script>
 </head>
 <body>
 
