@@ -18,6 +18,7 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     }
 
     @Autowired
+    //yo tambien pruebo
     @Qualifier("myOrganizationDetailService")
     private OrganizationDetailService myOrganizationDetailService;
 
