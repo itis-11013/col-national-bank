@@ -36,14 +36,14 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
                 //.antMatchers("/org").hasAnyAuthority("ADMIN")
                 .anyRequest().authenticated();
 
-        http.formLogin(withDefaults());
-//                .loginPage("/login")
-//                //.loginProcessingUrl("/myuserlogin")
-//                .usernameParameter("username")
-//                .passwordParameter("password")
-//                .defaultSuccessUrl("/")
-//                .failureUrl("/login?error")
-//                .permitAll();
+        http.formLogin(/*withDefaults()*/)
+                .loginPage("/login")
+                //.loginProcessingUrl("/myuserlogin")
+                .usernameParameter("username")
+                .passwordParameter("password")
+                .defaultSuccessUrl("/")
+                .failureUrl("/login?error")
+                .permitAll();
 
         //        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
     }
