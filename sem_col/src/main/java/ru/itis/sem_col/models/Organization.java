@@ -6,7 +6,6 @@ import ru.itis.sem_col.models.composite.InnerOrganization;
 
 import javax.persistence.*;
 
-import java.io.Serializable;
 import java.util.List;
 
 @Entity
@@ -34,5 +33,5 @@ public class Organization {
     private Country country;
 
     @OneToMany(mappedBy="organization")
-    private List<Acount> acounts;
+    private List<Account> accounts;
 }

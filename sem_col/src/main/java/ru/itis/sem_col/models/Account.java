@@ -10,7 +10,7 @@ import javax.persistence.*;
 @Table(name = "Acount")
 @Getter
 @Setter
-public class Acount {
+public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dictGen")
     @SequenceGenerator(name = "dictGen", sequenceName = "dictionary_seq", allocationSize = 1)
