@@ -26,7 +26,7 @@ public class Organization {
 
     private String password;
 
-
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "country_id")

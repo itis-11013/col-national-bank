@@ -6,4 +6,5 @@ import ru.itis.sem_col.models.composite.InnerOrganization;
 
 public interface OrganizationRepository extends CrudRepository<Organization, InnerOrganization> {
     Organization findById(Long id);
+    Organization findByName(String name);
 }
