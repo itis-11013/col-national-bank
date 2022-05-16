@@ -85,6 +85,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sem_col/src/main/resources" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sem_col/src/main/resources/resources/images" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SemColApplication">
     <configuration name="OrganizationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">

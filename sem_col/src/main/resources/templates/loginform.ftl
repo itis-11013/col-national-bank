@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Organization Login Form Spring Security</title>
 
-    <link rel='stylesheet' href='/resources/css/lab10.css'>
+    <link rel='stylesheet' href='/resources/css/login.css'>
 <#--    <script src='/resources/js/lab10.js'></script>-->
     <script>
         function validate(){
@@ -16,16 +16,26 @@
     </script>
 </head>
 <body>
+    <div class="__login">
+        <div class="login_text">
+            <h1>Log In</h1>
+        </div>
 
-<h1>UserLoginFormSpringSecurity</h1>
-
-<div>
-    <form action="/login" method="post" onsubmit="validate()">
-        <div><input class="field" name="name" placeholder="имя организация"/></div>
-        <div><input class="field" name="password" placeholder="пароль"/></div>
-        <div><input class="field" type="submit" value="Вход"/></div>
-    </form>
-</div>
-
+        <div class="login_form">
+            <form action="/login" method="post" onsubmit="validate()">
+                <p style="color: aliceblue">Colombia's Bank</p>
+                <div><input class="field" name="name" placeholder="Company's Name"/></div>
+                <div><input class="field" name="password" placeholder="Password"/></div>
+                <div><input class="field" type="submit" value="Log In"/></div>
+            </form>
+            <div class="drops">
+                <div class="drop drop-1"></div>
+                <div class="drop drop-2"></div>
+                <div class="drop drop-3"></div>
+                <div class="drop drop-4"></div>
+                <div class="drop drop-5"></div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
