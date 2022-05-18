@@ -6,6 +6,7 @@ import ru.itis.sem_col.models.composite.InnerProduct;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.UUID;
 
 @Entity
 @Table(name = "product")
@@ -20,7 +21,7 @@ public class Product implements Serializable {
 
     @Id
     @Basic(optional = true)
-    private Long innerId;
+    private UUID innerId;
 
     private String code;
 
