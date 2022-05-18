@@ -7,6 +7,7 @@ import ru.itis.sem_col.models.composite.InnerOrganization;
 import javax.persistence.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Entity
 @Table(name = "organization")
@@ -20,7 +21,7 @@ public class Organization {
 
     @Id
     @Basic(optional = true)
-    private Long innerId;
+    private UUID innerId;
 
     private String address;
 

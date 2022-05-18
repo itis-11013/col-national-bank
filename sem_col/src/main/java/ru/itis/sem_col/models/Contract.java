@@ -8,6 +8,7 @@ import ru.itis.sem_col.models.composite.InnerNationalBank;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
+import java.util.UUID;
 
 @Entity
 @Table(name = "contract")
@@ -25,7 +26,7 @@ public class Contract {
 
     @Id
     @Basic(optional = true)
-    private Long innerId;
+    private UUID innerId;
 
     @CreationTimestamp
     @Column(updatable = false)

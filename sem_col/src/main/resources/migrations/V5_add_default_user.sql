@@ -1,1 +1,1 @@
-INSERT INTO public.organization (innerid, id, address, password, country_id, name) VALUES (1::bigint, 1::bigint, 'street1001'::varchar(255), '$2a$10$8yYGXA2hlG3mGT2uvumoy.LlzkQ1Cnojo17lfN3JIM9HHOv71tv0C'::varchar(255), 1::bigint, 'admin')
+INSERT INTO public.organization (id, innerid, address, name, password, country_id) VALUES (1, 'efb816c6-d6bf-11ec-9d64-0242ac120002', 'street 102', 'admin', '$2a$10$8EpHGDGiWSNguyVW0NrMm.CLR8t8LiwPIDi62EPb1fhs7/.VQin36', 1);
