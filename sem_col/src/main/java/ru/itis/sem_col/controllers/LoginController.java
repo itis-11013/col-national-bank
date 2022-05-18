@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import ru.itis.sem_col.controllers.dto.LoginFormDto;
 import ru.itis.sem_col.repositories.OrganizationRepository;
+import ru.itis.sem_col.services.RestService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,7 @@ public class LoginController {
 
     @Autowired
     private OrganizationRepository repository;
+
 
     @GetMapping("/login")
     public String loginPage(Model model) {
