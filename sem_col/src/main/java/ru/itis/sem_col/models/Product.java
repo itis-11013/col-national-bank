@@ -32,6 +32,10 @@ public class Product implements Serializable {
     private Units unit;
 
     @ManyToOne
+    @JoinColumn(name = "catalog_id")
+    private ProductCatalog catalog;
+
+    @ManyToOne
     //@JoinColumn(name = "organization_ID")
     @JoinColumns({
             @JoinColumn(name = "organization_ID"),
