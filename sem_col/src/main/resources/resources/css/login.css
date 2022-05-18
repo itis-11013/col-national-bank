@@ -8,8 +8,6 @@ body {
 }
 /*titulo de login*/
 div.login_text{
-    /*margin-top: 10%;*/
-    /*margin-left: 42%;*/
     border-radius: 3rem;
     /*display:flex;*/
     align-items: center;
@@ -23,15 +21,6 @@ div.login_text{
 }
 /*form*/
 div.login_form {
-    /*align-items: start;*/
-    /*justify-content: center;*/
-    /*margin-top: 20px;*/
-    /*display:flex;*/
-    /*text-align: center;*/
-    /*background-color: rgba(0, 0, 0, 0.61);*/
-    /*backdrop-filter: blur(3px);*/
-    /*height: 150px;*/
-    /*width: 300px;*/
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
