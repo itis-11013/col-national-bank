@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="probando git">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/ProductCatalog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" afterDir="false" />
-    </list>
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="probando git" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
