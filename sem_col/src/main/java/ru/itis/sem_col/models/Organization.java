@@ -34,4 +34,8 @@ public class Organization {
 
     @OneToMany(mappedBy="organization")
     private List<Account> accounts;
+    
+    @OneToMany(mappedBy = "organization", cascade = CascadeType.PERSIST, orphanRemoval = true)
+    private List<Product> products;
+
 }
