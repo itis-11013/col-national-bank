@@ -21,6 +21,12 @@
                 x.type = "password";
             }
         }
+        function createOrg() {
+            document.write("&lt;form id='form1' name='form1'action=''>");
+            document.write(" &lt;td>&lt;input name='name' type='text' id='name'/>&lt;/td>");
+            document.write("&lt;td>&lt;input name='address' type='text' id='address'/>&lt;/td>");
+        }
+
     </script>
 </head>
 <body>
@@ -38,7 +44,10 @@
 </div>
 <div class="__container_org">
     <p style="color: aliceblue">You Don't Have An Organization?</p>
-    <button class="__org_button">Create Organization</button>
+    <button class="__org_button" onclick="createOrg()">Create Organization</button>
+</div>
+
+<div>
 </div>
 </body>
 </html>
