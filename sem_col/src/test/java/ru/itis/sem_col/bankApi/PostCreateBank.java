@@ -1,4 +1,4 @@
-package ru.itis.sem_col;
+package ru.itis.sem_col.bankApi;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
