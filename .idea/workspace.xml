@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="Test createbank and getbanks API">
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="Added css to create an organization">
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/registerform.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/NationalBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/NationalBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerContract.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerContract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerNationalBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerNationalBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerOrganization.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerOrganization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/composite/InnerProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/migrations/V5_add_default_user.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/migrations/V5_add_default_user.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/LoginFormDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/LoginFormDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/RequestBankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/RequestBankTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,12 +94,25 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SemColApplication">
+    <configuration name="GetOrganizationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.organizationApi.GetOrganizationTest" />
+      <module name="sem_col" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.itis.sem_col.organizationApi.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OrganizationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.OrganizationTest" />
       <module name="sem_col" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.itis.sem_col.*" />
+          <option name="PATTERN" value="ru.itis.sem_col.organizationApi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -112,11 +121,11 @@
       </method>
     </configuration>
     <configuration name="PostCreateBank" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.PostCreateBank" />
+      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.bankApi.PostCreateBank" />
       <module name="sem_col" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.itis.sem_col.*" />
+          <option name="PATTERN" value="ru.itis.sem_col.organizationApi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,11 +134,11 @@
       </method>
     </configuration>
     <configuration name="RequestBankTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.RequestBankTest" />
+      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.bankApi.RequestBankTest" />
       <module name="sem_col" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.itis.sem_col.*" />
+          <option name="PATTERN" value="ru.itis.sem_col.organizationApi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,7 +151,7 @@
       <module name="sem_col" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ru.itis.sem_col.*" />
+          <option name="PATTERN" value="ru.itis.sem_col.organizationApi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,9 +179,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OrganizationTest" />
-        <item itemvalue="Application.RequestBankTest" />
         <item itemvalue="Application.PostCreateBank" />
+        <item itemvalue="Application.RequestBankTest" />
+        <item itemvalue="Application.GetOrganizationTest" />
+        <item itemvalue="Application.OrganizationTest" />
         <item itemvalue="Application.proberequest" />
       </list>
     </recent_temporary>
@@ -195,6 +205,8 @@
       <workItem from="1652255508324" duration="8158000" />
       <workItem from="1652360690285" duration="3811000" />
       <workItem from="1652513240187" duration="4950000" />
+      <workItem from="1652961113720" duration="9988000" />
+      <workItem from="1653049870449" duration="5137000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
@@ -203,7 +215,35 @@
       <option name="project" value="LOCAL" />
       <updated>1652872959426</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed LONG to UUID in composite id's (RELOAD DATABASE)">
+      <created>1652889928510</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652889928510</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added css to create an organization">
+      <created>1652964124408</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652964124408</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added css to create an organization">
+      <created>1652970059040</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652970059040</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added css to create an organization">
+      <created>1653049924502</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653049924502</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +262,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test createbank and getbanks API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test createbank and getbanks API" />
+    <MESSAGE value="Changed LONG to UUID in composite id's (RELOAD DATABASE)" />
+    <MESSAGE value="Added css to create an organization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added css to create an organization" />
   </component>
 </project>

@@ -17,7 +17,7 @@ public class RequestBankTest {
                 = "http://188.93.211.195/central/bank";
         ResponseEntity<String> response
                 = restTemplate.getForEntity(fooResourceUrl + "", String.class);
-        //System.out.println(response);
+        System.out.println(response);
         ObjectMapper mapper =  new ObjectMapper();
         JsonNode root = mapper.readTree(response.getBody());
         JsonNode data = root.path("data");

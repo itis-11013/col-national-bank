@@ -15,6 +15,7 @@
         }
         function showPassword() {
             const x = document.getElementById("password");
+            const y = document.getElementsByClassName("sign_form")
             if (x.type === "password") {
                 x.type = "text";
             } else {
@@ -22,10 +23,17 @@
             }
         }
         function createOrg() {
-            document.write("&lt;form id='form1' name='form1'action=''>");
-            document.write(" &lt;td>&lt;input name='name' type='text' id='name'/>&lt;/td>");
-            document.write("&lt;td>&lt;input name='address' type='text' id='address'/>&lt;/td>");
+            if ( document.getElementById("register").classList.contains('show_form') )
+                document.getElementById("register").classList.replace('show_form','hide_form');
+
+            else
+                if (document.getElementById("register").classList.contains('hide_form'))
+                    document.getElementById("register").classList.replace('hide_form','show_form');
+                else
+                    document.getElementById("register").classList.add('show_form')
+
         }
+
 
     </script>
 </head>
@@ -47,7 +55,20 @@
     <button class="__org_button" onclick="createOrg()">Create Organization</button>
 </div>
 
-<div>
+<div id="register" class="hide_form">
+    <form action="/register" method="post">
+        <p style="color: aliceblue">Colombia's Bank</p>
+        <div>
+            <input class="field" name="name" placeholder="Organization's Name"/>
+        </div>
+        <div>
+            <input class="field" name="address" placeholder="Address" id="address" onclick="showPassword()"/>
+        </div>
+        <div>
+            <input class="field" name="password" placeholder="Password" id="password" type="password" onclick="showPassword()"/>
+        </div>
+        <div><input class="field" type="submit" value="Sign Up"/></div>
+    </form>
 </div>
 </body>
 </html>
