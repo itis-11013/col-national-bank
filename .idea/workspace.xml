@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="Added css to create an organization">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/organizationApi/GetOrganizationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/organizationApi/PostOrganization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/PostCreateBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/PostCreateBank.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/RequestBankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/RequestBankTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +199,7 @@
       <workItem from="1652255508324" duration="8158000" />
       <workItem from="1652360690285" duration="3811000" />
       <workItem from="1652513240187" duration="4950000" />
-      <workItem from="1652961113720" duration="8166000" />
+      <workItem from="1652961113720" duration="9988000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
@@ -228,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652964124408</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added css to create an organization">
+      <created>1652970059040</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1652970059040</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
