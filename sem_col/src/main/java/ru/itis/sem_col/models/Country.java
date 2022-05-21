@@ -23,9 +23,10 @@ public class Country{
 
 
 
-    @OneToMany(mappedBy = "country")
+    @OneToMany(mappedBy = "country", cascade = {CascadeType.ALL})
     private List<Organization> organizations;
 
     @OneToMany(mappedBy = "country")
     private List<NationalBank> banks;
+
 }

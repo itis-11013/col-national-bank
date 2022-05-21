@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.itis.sem_col.security.OrganizationDetailService;
+import ru.itis.sem_col.services.OrganizationCreateService;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 @Configuration
@@ -23,16 +24,18 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
     }
 
     @Autowired
-    //yo tambien pruebo
     @Qualifier("myOrganizationDetailService")
     private OrganizationDetailService myOrganizationDetailService;
 
     @Autowired
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(myOrganizationDetailService).passwordEncoder(passwordEncoder());
-    }
 
+        auth.userDetailsService(myOrganizationDetailService).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(myOrganizationDetailService);
+
+    }
+    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();

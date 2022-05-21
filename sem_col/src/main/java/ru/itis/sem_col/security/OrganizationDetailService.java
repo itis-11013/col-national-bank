@@ -5,8 +5,12 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import ru.itis.sem_col.controllers.dto.RegisterOrganizationDto;
+import ru.itis.sem_col.models.Country;
 import ru.itis.sem_col.models.Organization;
 import ru.itis.sem_col.repositories.OrganizationRepository;
+
+import java.util.UUID;
 
 @Service(value = "myOrganizationDetailService")
 public class OrganizationDetailService  implements UserDetailsService {
