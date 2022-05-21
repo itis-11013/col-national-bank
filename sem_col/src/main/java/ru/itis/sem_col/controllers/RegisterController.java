@@ -1,6 +1,7 @@
 package ru.itis.sem_col.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -36,7 +37,9 @@ public class RegisterController {
     @PostMapping("/register")
     public ModelAndView registerUserAccount(
             @ModelAttribute("organization") @Valid RegisterOrganizationDto organizationDto, HttpServletRequest request, Errors errors) {
-
+            BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+            String encodedPassword = passwordEncoder.encode(organizationDto.getPassword());
+            organizationDto.setPassword(encodedPassword);
         try {
             Organization registered = organizationDetailService.registerNewOrganization(organizationDto);
         } catch (Exception e) {

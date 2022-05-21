@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="Controller org (process...)">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/OrganizationCreateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/app.ftl" afterDir="false" />
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="added register form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Organization.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Organization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/security/OrganizationDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/security/OrganizationDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,9 +91,6 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/sem_col/src/main/resources/resources/images" />
-    </key>
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="ru.itis.sem_col.security" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.SemColApplication">
@@ -219,7 +207,7 @@
       <workItem from="1652513240187" duration="4950000" />
       <workItem from="1652961113720" duration="9988000" />
       <workItem from="1653049870449" duration="8003000" />
-      <workItem from="1653135682057" duration="8991000" />
+      <workItem from="1653135682057" duration="676000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
@@ -263,18 +251,22 @@
       <option name="project" value="LOCAL" />
       <updated>1653055040156</updated>
     </task>
-    <task id="LOCAL-00007" summary="Controller org (process...)">
-      <created>1653136566412</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1653136566412</updated>
-    </task>
-    <option name="localTasksCounter" value="8" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -292,7 +284,6 @@
     <MESSAGE value="Changed LONG to UUID in composite id's (RELOAD DATABASE)" />
     <MESSAGE value="Added css to create an organization" />
     <MESSAGE value="added register form" />
-    <MESSAGE value="Controller org (process...)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller org (process...)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added register form" />
   </component>
 </project>
