@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Organization Login Form Spring Security</title>
+    <title>Login</title>
 
     <link rel='stylesheet' href='/resources/css/login.css'>
     <#--    <script src='/resources/js/lab10.js'></script>-->
@@ -52,23 +52,11 @@
 </div>
 <div class="__container_org">
     <p style="color: aliceblue">You Don't Have An Organization?</p>
-    <button class="__org_button" onclick="createOrg()">Create Organization</button>
+    <a href="/register">
+        <button class="__org_button">Create Organization</button>
+    </a>
+
 </div>
 
-<div id="register" class="hide_form">
-    <form action="/register" method="post">
-        <p style="color: aliceblue">Colombia's Bank</p>
-        <div>
-            <input class="field" name="name" placeholder="Organization's Name"/>
-        </div>
-        <div>
-            <input class="field" name="address" placeholder="Address" id="address" onclick="showPassword()"/>
-        </div>
-        <div>
-            <input class="field" name="password" placeholder="Password" id="password" type="password" onclick="showPassword()"/>
-        </div>
-        <div><input class="field" type="submit" value="Sign Up"/></div>
-    </form>
-</div>
 </body>
 </html>
