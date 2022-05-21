@@ -27,9 +27,11 @@ public class LoginController {
     @PostMapping("/usercheck")
     public String loginForm(HttpServletRequest request, Model model, LoginFormDto form) {
 
-        System.out.println(form.getName());
+        System.out.println(form.getName() + "--------------");
+
         try {
             request.login(form.getName(), form.getPassword());
+            System.out.println("dsajjnne");
         } catch (ServletException e) {
             e.printStackTrace();
         }

@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="Added css to create an organization">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/registerform.ftl" afterDir="false" />
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="added register form">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2022,_13_36_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_14_05_2022__13_36__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/LoginFormDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/LoginFormDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/RegisterOrganizationDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/RegisterOrganizationDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/RequestBankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/RequestBankTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/registerform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/registerform.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="kevinchanges" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -206,7 +213,8 @@
       <workItem from="1652360690285" duration="3811000" />
       <workItem from="1652513240187" duration="4950000" />
       <workItem from="1652961113720" duration="9988000" />
-      <workItem from="1653049870449" duration="5137000" />
+      <workItem from="1653049870449" duration="8003000" />
+      <workItem from="1653135682057" duration="676000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
@@ -243,7 +251,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653049924502</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added register form">
+      <created>1653055040156</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653055040156</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -264,6 +279,7 @@
     <MESSAGE value="Test createbank and getbanks API" />
     <MESSAGE value="Changed LONG to UUID in composite id's (RELOAD DATABASE)" />
     <MESSAGE value="Added css to create an organization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added css to create an organization" />
+    <MESSAGE value="added register form" />
+    <option name="LAST_COMMIT_MESSAGE" value="added register form" />
   </component>
 </project>
