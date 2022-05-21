@@ -17,6 +17,7 @@ import java.util.UUID;
 @IdClass(InnerOrganization.class)
 public class Organization {
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Id
