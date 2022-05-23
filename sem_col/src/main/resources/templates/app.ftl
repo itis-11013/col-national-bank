@@ -6,11 +6,17 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
 
-    <link rel='stylesheet' href='/resources/css/login.css'>
+    <link rel='stylesheet' href='/resources/css/register.css'>
     <#--    <script src='/resources/js/lab10.js'></script>-->
 
 </head>
 
 <body>
-App bank
+<div class="__containerbackto">
+    <p>Thanks For Your Registration</p>
+    <a href="/login" class="ui-button">
+        <button class="__gobackbutton">Go Back To Log In</button>
+    </a>
+</div>
+
 </body>

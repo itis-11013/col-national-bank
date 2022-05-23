@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="added register form">
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/app.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/app.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +95,7 @@
       <recent name="$PROJECT_DIR$/sem_col/src/main/resources/resources/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SemColApplication">
+  <component name="RunManager" selected="Application.PostOrganization">
     <configuration name="GetOrganizationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.organizationApi.GetOrganizationTest" />
       <module name="sem_col" />
@@ -133,8 +135,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RequestBankTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.bankApi.RequestBankTest" />
+    <configuration name="PostOrganization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.organizationApi.PostOrganization" />
       <module name="sem_col" />
       <extension name="coverage">
         <pattern>
@@ -146,8 +148,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="proberequest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.proberequest" />
+    <configuration name="RequestBankTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.bankApi.RequestBankTest" />
       <module name="sem_col" />
       <extension name="coverage">
         <pattern>
@@ -179,11 +181,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PostOrganization" />
+        <item itemvalue="Application.GetOrganizationTest" />
         <item itemvalue="Application.PostCreateBank" />
         <item itemvalue="Application.RequestBankTest" />
-        <item itemvalue="Application.GetOrganizationTest" />
         <item itemvalue="Application.OrganizationTest" />
-        <item itemvalue="Application.proberequest" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +210,7 @@
       <workItem from="1652961113720" duration="9988000" />
       <workItem from="1653049870449" duration="8003000" />
       <workItem from="1653135682057" duration="676000" />
+      <workItem from="1653303786807" duration="3338000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
