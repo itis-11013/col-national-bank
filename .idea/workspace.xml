@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="added register form">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/register.css" afterDir="false" />
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="added css after register">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/app.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/app.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/IOrgService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/IOrgService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/OrganizationCreateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/OrganizationCreateService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +95,7 @@
       <recent name="$PROJECT_DIR$/sem_col/src/main/resources/resources/images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PostOrganization">
+  <component name="RunManager" selected="Spring Boot.SemColApplication">
     <configuration name="GetOrganizationTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.itis.sem_col.organizationApi.GetOrganizationTest" />
       <module name="sem_col" />
@@ -210,7 +210,7 @@
       <workItem from="1652961113720" duration="9988000" />
       <workItem from="1653049870449" duration="8003000" />
       <workItem from="1653135682057" duration="676000" />
-      <workItem from="1653303786807" duration="3338000" />
+      <workItem from="1653303786807" duration="4440000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
@@ -254,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653055040156</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added css after register">
+      <created>1653307348212</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1653307348212</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,6 +294,7 @@
     <MESSAGE value="Changed LONG to UUID in composite id's (RELOAD DATABASE)" />
     <MESSAGE value="Added css to create an organization" />
     <MESSAGE value="added register form" />
-    <option name="LAST_COMMIT_MESSAGE" value="added register form" />
+    <MESSAGE value="added css after register" />
+    <option name="LAST_COMMIT_MESSAGE" value="added css after register" />
   </component>
 </project>
