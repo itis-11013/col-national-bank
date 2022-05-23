@@ -30,6 +30,7 @@ public class PostOrganization {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode root = objectMapper.readTree(personResultAsJsonStr);
         JsonNode innerId = root.path("innerid");
+        System.out.println(innerId);
 
     }
 }

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-
+    <link rel="icon" href="https://www.flaticon.com/free-icons/bank">
     <link rel='stylesheet' href='/resources/css/login.css'>
     <#--    <script src='/resources/js/lab10.js'></script>-->
     <script>
@@ -22,18 +22,6 @@
                 x.type = "password";
             }
         }
-        function createOrg() {
-            if ( document.getElementById("register").classList.contains('show_form') )
-                document.getElementById("register").classList.replace('show_form','hide_form');
-
-            else
-                if (document.getElementById("register").classList.contains('hide_form'))
-                    document.getElementById("register").classList.replace('hide_form','show_form');
-                else
-                    document.getElementById("register").classList.add('show_form')
-
-        }
-
 
     </script>
 </head>
