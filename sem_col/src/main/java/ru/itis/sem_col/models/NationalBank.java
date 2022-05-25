@@ -15,17 +15,13 @@ import java.util.UUID;
 @IdClass(InnerNationalBank.class)
 public class NationalBank {
     @Id
-//    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dictGen")
-//    @SequenceGenerator(name = "dictGen", sequenceName = "dictionary_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Id
-    @Basic(optional = true)
     private UUID innerId;
 
     private String address;
-
-
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "country_id")

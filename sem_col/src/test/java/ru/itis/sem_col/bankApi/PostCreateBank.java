@@ -20,9 +20,9 @@ public class PostCreateBank {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         JSONObject map = new JSONObject();
-        map.put("name", "ProbeBankCo");
-        map.put("country", "PR");
-        map.put("address", "probe 172");
+        map.put("name", "Colombian");
+        map.put("country", "co");
+        map.put("address", "street 1281 bogota");
         map.put("url", "probebankco.com");
         System.out.println(map);
 
@@ -34,6 +34,7 @@ public class PostCreateBank {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode root = objectMapper.readTree(personResultAsJsonStr);
         JsonNode innerId = root.path("innerid");
+        System.out.println(innerId);
 
 
 

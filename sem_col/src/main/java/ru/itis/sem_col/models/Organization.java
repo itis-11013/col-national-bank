@@ -34,7 +34,7 @@ public class Organization {
     @JoinColumn(name = "country_id")
     private Country country;
 
-    @OneToMany(mappedBy="organization")
+    @OneToMany(mappedBy="organization", cascade = CascadeType.PERSIST, orphanRemoval = true)
     private List<Account> accounts;
     
     @OneToMany(mappedBy = "organization", cascade = CascadeType.PERSIST, orphanRemoval = true)

@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "Acount")
+@Table(name = "Account")
 @Getter
 @Setter
 public class Account {
@@ -19,8 +19,8 @@ public class Account {
     @ManyToOne(fetch = FetchType.LAZY)
     //@JoinColumn(name = "NationalBank_ID")
     @JoinColumns({
-            @JoinColumn(name ="NationalBank_ID", insertable = false, updatable = false),
-            @JoinColumn(name = "country_id", insertable = false, updatable = false)
+            @JoinColumn(name ="NationalBank_ID"),
+            @JoinColumn(name = "NationalBank_UUID")
     })
     private NationalBank national_bank;
 
@@ -32,7 +32,7 @@ public class Account {
     //@JoinColumn(name = "organization_ID")
     @JoinColumns({
             @JoinColumn(name = "organization_ID"),
-            @JoinColumn(name = "country_id")
+            @JoinColumn(name = "organization_UUID")
     })
     private Organization organization;
 

@@ -41,7 +41,7 @@ public class RegisterController {
             String encodedPassword = passwordEncoder.encode(organizationDto.getPassword());
             organizationDto.setPassword(encodedPassword);
         try {
-            Organization registered = organizationDetailService.registerNewOrganization(organizationDto);
+            organizationDetailService.registerNewOrganization(organizationDto);
         } catch (Exception e) {
             System.out.println(e);
             System.out.println(("message An account for that username/email already exists."));
