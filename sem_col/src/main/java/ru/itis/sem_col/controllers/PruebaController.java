@@ -18,6 +18,7 @@ public class PruebaController {
 
     @RequestMapping("/lista")
     public List<ProductCatalog> getall(Model model, @RequestParam("name") String name) {
+        System.out.println(catalogServiceimpl.findByName(name));
         return catalogServiceimpl.findByName(name);
 
     }
