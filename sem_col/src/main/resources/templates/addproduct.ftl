@@ -6,8 +6,16 @@
     <title>add products for sale</title>
 </head>
 <body>
+<div id="register" class="show_form">
+    <form action="/register" method="post">
+        <p style="color: aliceblue">Colombia's Bank</p>
+        <div>
+            <input class="field" name="code" placeholder="code"/>
+        </div>
+    </form>
 
-<h1>agregar</h1>
+</div>
 
 </body>
+
 </html>
