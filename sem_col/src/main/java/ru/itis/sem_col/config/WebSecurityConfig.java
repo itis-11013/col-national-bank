@@ -8,13 +8,10 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import ru.itis.sem_col.security.OrganizationDetailService;
-import ru.itis.sem_col.services.OrganizationCreateService;
+import ru.itis.sem_col.security.OrganizationDetail;
 
-import static org.springframework.security.config.Customizer.withDefaults;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(securedEnabled=true)
@@ -25,14 +22,14 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
 
     @Autowired
     @Qualifier("myOrganizationDetailService")
-    private OrganizationDetailService myOrganizationDetailService;
+    private OrganizationDetail myOrganizationDetail;
 
     @Autowired
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 
-        auth.userDetailsService(myOrganizationDetailService).passwordEncoder(passwordEncoder());
-        auth.userDetailsService(myOrganizationDetailService);
+        auth.userDetailsService(myOrganizationDetail).passwordEncoder(passwordEncoder());
+        auth.userDetailsService(myOrganizationDetail);
 
     }
     

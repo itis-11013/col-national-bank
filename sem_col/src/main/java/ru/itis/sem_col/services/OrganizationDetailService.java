@@ -27,7 +27,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 @Service
 @Transactional
-public class OrganizationCreateService implements IOrgService{
+public class OrganizationDetailService implements IOrgService{
     @Autowired
     private OrganizationRepository organizationRepository;
     @Autowired
@@ -39,6 +39,7 @@ public class OrganizationCreateService implements IOrgService{
     @Autowired
     private NationalBankRepository nationalBankRepository;
 
+    Organization organization = new Organization();
     @Override
     public Organization registerNewOrganization(RegisterOrganizationDto organizationDto) throws JsonProcessingException {
         //get data from server
@@ -63,7 +64,6 @@ public class OrganizationCreateService implements IOrgService{
         ///// add organization to BD
         UUID uuid = UUID.fromString(innerId.asText());
         Country country = countryRepository.findByCode("co");
-        Organization organization = new Organization();
         organization.setName(organizationDto.getName());
         organization.setAddress(organizationDto.getAddress());
         organization.setPassword(organizationDto.getPassword());
@@ -84,5 +84,14 @@ public class OrganizationCreateService implements IOrgService{
         account.setNational_bank(nationalBank);
         accountRepository.save(account);
         return organization;
+    }
+
+    public Organization getOrganization() {
+        return organization;
+    }
+
+    public void setOrganization(Organization organization) {
+        System.out.println(organization.getName() + organization.getAddress() + organization.getCountry() );
+        this.organization = organization;
     }
 }
