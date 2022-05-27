@@ -16,7 +16,7 @@ import java.util.UUID;
 public class Product implements Serializable {
     @Id
 //    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dictGen")
-//    @SequenceGenerator(name = "dictGen", sequenceName = "dictionary_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
     @Id
@@ -34,10 +34,9 @@ public class Product implements Serializable {
     private ProductCatalog catalog;
 
     @ManyToOne
-    //@JoinColumn(name = "organization_ID")
     @JoinColumns({
             @JoinColumn(name = "organization_ID"),
-            @JoinColumn(name = "country_id")
+            @JoinColumn(name = "organization_UUID")
     })
     private Organization organization;
 

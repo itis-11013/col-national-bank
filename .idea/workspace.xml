@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="probando git">
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/addproduct.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/addproduct.ftl" afterDir="false" />
-
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="query limit 2000 added in Product catalog">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CurrentOrganization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/security/OrganizationDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/security/OrganizationDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CatalogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/OrganizationCreateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/OrganizationDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductCatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductCatalogCreateService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Units.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Units.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CurrentOrganization.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductServiceImpl.java" afterDir="false" />
-
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -269,9 +255,6 @@
       <option name="project" value="LOCAL" />
       <updated>1653055040156</updated>
     </task>
-
-    <option name="localTasksCounter" value="7" />
-
     <task id="LOCAL-00007" summary="fixed classnames">
       <created>1653652996784</created>
       <option name="number" value="00007" />
@@ -286,8 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653656453108</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
-
+    <task id="LOCAL-00009" summary="ContextOrganization ready to use">
+      <created>1653661971868</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1653661971868</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,11 +309,9 @@
     <MESSAGE value="Changed LONG to UUID in composite id's (RELOAD DATABASE)" />
     <MESSAGE value="Added css to create an organization" />
     <MESSAGE value="added register form" />
-
-    <option name="LAST_COMMIT_MESSAGE" value="added register form" />
     <MESSAGE value="fixed classnames" />
     <MESSAGE value="query limit 2000 added in Product catalog" />
-    <option name="LAST_COMMIT_MESSAGE" value="query limit 2000 added in Product catalog" />
-
+    <MESSAGE value="ContextOrganization ready to use" />
+    <option name="LAST_COMMIT_MESSAGE" value="ContextOrganization ready to use" />
   </component>
 </project>

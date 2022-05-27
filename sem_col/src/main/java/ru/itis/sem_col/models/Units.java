@@ -14,7 +14,7 @@ import javax.persistence.Table;
 @Setter
 public class Units {
     @Id
-    private long id;
+    private Long id;
 
     private String code;
 
