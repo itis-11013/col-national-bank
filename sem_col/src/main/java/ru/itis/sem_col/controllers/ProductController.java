@@ -1,6 +1,8 @@
 package ru.itis.sem_col.controllers;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.cache.SpringCacheBasedUserCache;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +16,7 @@ import ru.itis.sem_col.models.ProductCatalog;
 import ru.itis.sem_col.models.Units;
 import ru.itis.sem_col.services.OrganizationDetailService;
 import ru.itis.sem_col.services.ProductCatalogCreateService;
+import ru.itis.sem_col.services.ProductServiceImpl;
 import ru.itis.sem_col.services.UnitServiceImpl;
 
 import javax.validation.Valid;
@@ -26,8 +29,9 @@ public class ProductController {
 
     @Autowired
     UnitServiceImpl unitServiceImpl;
+
     @Autowired
-    private OrganizationDetailService organizationDetailService;
+    ProductServiceImpl productService;
 
     @GetMapping("/product/add")
     public String addProduct(WebRequest request, Model model) {
@@ -39,14 +43,13 @@ public class ProductController {
 
         model.addAttribute("productredy", productDto);
 
-        organizationDetailService.getOrganization();
         return "addproduct";
     }
 
     @PostMapping("/product/add")
-    public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid ProductDto productDto) {
-        System.out.println(productDto.getUnits().getType());
-        System.out.println(productDto.getProduct().getName());
+    public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid ProductDto productDto) throws JsonProcessingException {
+        productService.registerNewProduct(productDto);
+
 
 
 
