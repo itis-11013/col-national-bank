@@ -24,7 +24,7 @@ public class ProductCatalogService implements CatalogService{
     }
 
     @Override
-    public List<ProductCatalog> listAllProductCatlog() {
-        return (List<ProductCatalog>) productCatalogRepository.findAll();
+    public List<ProductCatalog> listAllProductCatalog() {
+        return productCatalogRepository.findAlLimit();
     }
 }

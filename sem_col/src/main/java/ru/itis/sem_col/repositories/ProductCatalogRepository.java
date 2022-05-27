@@ -12,4 +12,8 @@ public interface ProductCatalogRepository extends CrudRepository <ProductCatalog
     List<ProductCatalog> findByCode(@Param("code")String code);
     @Query("select m from ProductCatalog m where UPPER(name) like '%' ||  :name  ||'%'")
     List<ProductCatalog> findByName(@Param("name") String name);
+
+    @Query(value = "SELECT * FROM Product_Catalog LIMIT 2000", nativeQuery=true)
+    List<ProductCatalog> findAlLimit();
+
 }

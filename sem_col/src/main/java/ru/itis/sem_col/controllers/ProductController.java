@@ -33,7 +33,7 @@ public class ProductController {
     @GetMapping("/product/add")
     public String addProduct(WebRequest request, Model model) {
         ProductDto productDto = new ProductDto();
-        List<ProductCatalog> products = catalogServiceimpl.listAllProductCatlog();
+        List<ProductCatalog> products = catalogServiceimpl.listAllProductCatalog();
         List<Units> units = unitServiceImpl.listAllUnits();
         model.addAttribute("product", products );
         model.addAttribute("units", units );
