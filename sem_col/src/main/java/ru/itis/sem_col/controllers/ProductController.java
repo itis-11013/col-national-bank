@@ -21,16 +21,14 @@ public class ProductController {
     @Autowired
     UnitServiceImpl unitServiceImpl;
 
-//    @GetMapping("/product/add")
-//    public String loginPage(Model model) {
-//        return "addproduct";
-//    }
     @GetMapping("/product/add")
-    public String showRegistrationForm(WebRequest request, Model model) {
+    public String addProduct(WebRequest request, Model model) {
         List<ProductCatalog> products = catalogServiceimpl.listAllProductCatlog();
         List<Units> units = unitServiceImpl.listAllUnits();
         model.addAttribute("product", products );
         model.addAttribute("units", units );
         return "addproduct";
     }
+
+
 }
