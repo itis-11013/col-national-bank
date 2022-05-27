@@ -6,15 +6,15 @@
     <title>add products for sale</title>
 </head>
 <body>
-<h></h>
+<h>REGISTER PRODUCT</h>
 <div class="__login">
     <div class="login_form">
-        <form method="post">
+        <form action="/product/add" method="post">
             <div>
                 <label> units : </label>
                 <select name="units" style="width:250px">
                     <#list units as a>
-                        <option name="units">${a.type}</option>
+                        <option name="units" value="${a.id}">${a.type}</option>
                     </#list>
                 </select>
             </div>
@@ -23,13 +23,13 @@
                 <label> Product : </label>
                 <select name="product" style="width:250px">
                     <#list product as category>
-                        <option name="product">${category.name}</option>
+                        <option name="product" value="${category.id}">${category.name}</option>
                     </#list>
                 </select>
             </div>
             <div>
                 <label>Quantity</label>
-                <input type="number" name="quantity" placeholder="quantity" id="quantity">
+                <input type="number" name="count" placeholder="quantity" id="count">
             </div>
             <div>
                 <label>Price</label>

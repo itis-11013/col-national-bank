@@ -36,12 +36,17 @@ public class ProductController {
         List<Units> units = unitServiceImpl.listAllUnits();
         model.addAttribute("product", products );
         model.addAttribute("units", units );
+
+        model.addAttribute("productredy", productDto);
+
         organizationDetailService.getOrganization();
         return "addproduct";
     }
 
     @PostMapping("/product/add")
     public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid ProductDto productDto) {
+        System.out.println(productDto.getUnits().getType());
+        System.out.println(productDto.getProduct().getName());
 
 
 
