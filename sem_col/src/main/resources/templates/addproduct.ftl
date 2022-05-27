@@ -9,21 +9,21 @@
 <h></h>
 <div class="__login">
     <div class="login_form">
-        <form action="/login" method="post">
+        <form method="post">
             <div>
                 <label> units : </label>
                 <select name="units" style="width:250px">
                     <#list units as a>
-                        <option name="producto">${a.type}</option>
+                        <option name="units">${a.type}</option>
                     </#list>
                 </select>
             </div>
 
             <div>
-                <label> producto : </label>
-                <select name="producto" style="width:250px">
-                    <#list producto as category>
-                        <option name="producto">${category.name}</option>
+                <label> Product : </label>
+                <select name="product" style="width:250px">
+                    <#list product as category>
+                        <option name="product">${category.name}</option>
                     </#list>
                 </select>
             </div>

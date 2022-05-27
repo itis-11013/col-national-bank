@@ -8,7 +8,7 @@ import ru.itis.sem_col.models.Units;
 
 @Getter
 @Setter
-public class AddProductDto {
+public class ProductDto {
     private ProductCatalog catalog;
     private Units units;
     private Long price;

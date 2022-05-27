@@ -7,16 +7,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.context.request.WebRequest;
 import ru.itis.sem_col.models.ProductCatalog;
 import ru.itis.sem_col.models.Units;
-import ru.itis.sem_col.services.CatalogServiceimpl;
+import ru.itis.sem_col.services.ProductCatalogService;
 import ru.itis.sem_col.services.UnitServiceImpl;
 
 import java.util.List;
 
 @Controller
-public class AddProductController {
+public class ProductController {
 
     @Autowired
-    CatalogServiceimpl catalogServiceimpl;
+    ProductCatalogService catalogServiceimpl;
 
     @Autowired
     UnitServiceImpl unitServiceImpl;
@@ -29,7 +29,7 @@ public class AddProductController {
     public String showRegistrationForm(WebRequest request, Model model) {
         List<ProductCatalog> products = catalogServiceimpl.listAllProductCatlog();
         List<Units> units = unitServiceImpl.listAllUnits();
-        model.addAttribute("producto", products );
+        model.addAttribute("product", products );
         model.addAttribute("units", units );
         return "addproduct";
     }

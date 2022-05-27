@@ -9,10 +9,6 @@
     <link rel='stylesheet' href='/resources/css/login.css'>
     <#--    <script src='/resources/js/lab10.js'></script>-->
     <script>
-        function validate(){
-            alert('Ok')
-            return true;
-        }
         function showPassword() {
             const x = document.getElementById("password");
             const y = document.getElementsByClassName("sign_form")

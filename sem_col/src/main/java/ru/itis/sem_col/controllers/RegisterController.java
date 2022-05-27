@@ -28,7 +28,7 @@ public class RegisterController {
     private OrganizationCreateService organizationDetailService;
 
     @GetMapping("/register")
-    public String showRegistrationForm(WebRequest request, Model model) {
+    public String showRegistrationForm(Model model) {
         RegisterOrganizationDto organizationDto = new RegisterOrganizationDto();
         model.addAttribute("organization", organizationDto);
         return "registerform";
@@ -36,7 +36,7 @@ public class RegisterController {
 
     @PostMapping("/register")
     public ModelAndView registerUserAccount(
-            @ModelAttribute("organization") @Valid RegisterOrganizationDto organizationDto, HttpServletRequest request, Errors errors) {
+            @ModelAttribute("organization") @Valid RegisterOrganizationDto organizationDto) {
             BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
             String encodedPassword = passwordEncoder.encode(organizationDto.getPassword());
             organizationDto.setPassword(encodedPassword);

@@ -40,7 +40,7 @@ public class OrganizationCreateService implements IOrgService{
     private NationalBankRepository nationalBankRepository;
 
     @Override
-    public void registerNewOrganization(RegisterOrganizationDto organizationDto) throws JsonProcessingException {
+    public Organization registerNewOrganization(RegisterOrganizationDto organizationDto) throws JsonProcessingException {
         //get data from server
         String url = "http://188.93.211.195/central/organization";
         HttpHeaders headers = new HttpHeaders();
@@ -83,5 +83,6 @@ public class OrganizationCreateService implements IOrgService{
         System.out.println(nationalBank.getInnerId());
         account.setNational_bank(nationalBank);
         accountRepository.save(account);
+        return organization;
     }
 }

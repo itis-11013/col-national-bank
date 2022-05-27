@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface CatalogService {
     List<ProductCatalog> findByName(String name);
-    List<ProductCatalog>findByCode(String code);
+    List<ProductCatalog> findByCode(String code);
     List<ProductCatalog> listAllProductCatlog();
 }

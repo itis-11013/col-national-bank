@@ -8,7 +8,7 @@ import ru.itis.sem_col.repositories.ProductCatalogRepository;
 import java.util.List;
 
 @Service
-public class CatalogServiceimpl implements CatalogService{
+public class ProductCatalogService implements CatalogService{
     @Autowired
     ProductCatalogRepository productCatalogRepository;
 

@@ -3,10 +3,10 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>maket</title>
+    <title>market</title>
 </head>
 <body>
-<h1>maket</h1>
+<h1>market</h1>
 
 </body>
 

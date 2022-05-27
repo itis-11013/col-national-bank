@@ -36,7 +36,6 @@ public class LoginController {
 
         try {
             request.login(form.getName(), form.getPassword());
-            System.out.println("dsajjnne");
         } catch (ServletException e) {
             e.printStackTrace();
         }

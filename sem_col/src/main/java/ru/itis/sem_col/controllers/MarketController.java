@@ -4,7 +4,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.context.request.WebRequest;
-import ru.itis.sem_col.controllers.dto.AddProductDto;
 
 @Controller
 public class MarketController {

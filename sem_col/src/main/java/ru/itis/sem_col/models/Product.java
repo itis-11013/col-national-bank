@@ -23,9 +23,6 @@ public class Product implements Serializable {
     @Basic(optional = true)
     private UUID innerId;
 
-    private String code;
-
-    private String name;
 
 
     @OneToOne(cascade = CascadeType.ALL)
