@@ -14,11 +14,17 @@ public class CatalogServiceimpl implements CatalogService{
 
     @Override
     public List<ProductCatalog> findByName(String name) {
+
         return productCatalogRepository.findByName(name);
     }
 
     @Override
     public List<ProductCatalog> findByCode(String code) {
         return productCatalogRepository.findByCode(code);
+    }
+
+    @Override
+    public List<ProductCatalog> listAllProductCatlog() {
+        return (List<ProductCatalog>) productCatalogRepository.findAll();
     }
 }

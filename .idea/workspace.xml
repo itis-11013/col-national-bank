@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="probando git">
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/P2controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/llista.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/PruebaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/PruebaController.java" afterDir="false" />
-    </list>
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="probando git" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -211,6 +206,9 @@
       <workItem from="1652961113720" duration="9988000" />
       <workItem from="1653049870449" duration="8003000" />
       <workItem from="1653135682057" duration="676000" />
+      <workItem from="1653514251985" duration="1414000" />
+      <workItem from="1653571823888" duration="795000" />
+      <workItem from="1653593739147" duration="10191000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
