@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="">
-
-      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/dto/AccountDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketServiceDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/account.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/account.ftl" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductServiceImpl.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/OrganizationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/OrganizationRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/UnitsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/UnitsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CatalogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/UnitServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/UnitServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/RequestBankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/test/java/ru/itis/sem_col/bankApi/RequestBankTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,9 +187,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PostCreateBank" />
         <item itemvalue="Application.RequestBankTest" />
         <item itemvalue="Application.GetOrganizationTest" />
+        <item itemvalue="Application.PostCreateBank" />
         <item itemvalue="Application.OrganizationTest" />
         <item itemvalue="Application.proberequest" />
       </list>

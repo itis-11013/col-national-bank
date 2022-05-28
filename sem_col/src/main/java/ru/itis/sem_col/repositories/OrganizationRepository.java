@@ -4,7 +4,9 @@ import org.springframework.data.repository.CrudRepository;
 import ru.itis.sem_col.models.Organization;
 import ru.itis.sem_col.models.composite.InnerOrganization;
 
+import java.util.UUID;
+
 public interface OrganizationRepository extends CrudRepository<Organization, InnerOrganization> {
-    Organization findById(Long id);
     Organization findByName(String name);
+    Organization findByInnerId(UUID uuid);
 }
