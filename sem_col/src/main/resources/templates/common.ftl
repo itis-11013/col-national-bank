@@ -27,6 +27,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/product/add">Create Product</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">out</a>
+                    </li>
                 </ul>
 <#--                <span class="navbar-text">-->
 <#--        Navbar text with an inline element-->
