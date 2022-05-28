@@ -1,11 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>add products for sale</title>
-</head>
-<body>
+<#import "common.ftl" as c>
+<@c.page>
 <h>REGISTER PRODUCT</h>
 <div class="__login">
     <div class="login_form">
@@ -39,7 +33,4 @@
         </form>
     </div>
 </div>
-
-</body>
-
-</html>
+</@c.page>
