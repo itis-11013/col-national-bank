@@ -8,9 +8,12 @@
         <span> Currency : ${account.currency}</span>
         <span> Amount : ${account.amount}</span>
     </div>
+    <form action="/account" method="post">
     <div>
         <label>Add money</label>
         <input type="number" name="amount" placeholder="amount" id="amount" style="-moz-appearance: textfield">
     </div>
+    <div><input class="field" type="submit" value="add money"/></div>
+    </form>
 
 </@c.page>

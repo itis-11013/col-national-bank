@@ -43,6 +43,8 @@ public class WebSecurityConfig  extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").authenticated()
                 //.antMatchers("/org").hasAnyAuthority("ADMIN")
                 .anyRequest().authenticated();
+        http.logout().logoutSuccessUrl("/");
+
 
         http.formLogin(/*withDefaults()*/)
                 .loginPage("/login")
