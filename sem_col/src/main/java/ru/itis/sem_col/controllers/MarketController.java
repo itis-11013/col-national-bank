@@ -6,7 +6,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.context.request.WebRequest;
+import ru.itis.sem_col.controllers.dto.ProductDto;
+import ru.itis.sem_col.models.Product;
+import ru.itis.sem_col.models.ProductCatalog;
 import ru.itis.sem_col.services.MarketServiceDetails;
+
+import java.util.List;
 
 @Controller
 public class MarketController {
@@ -15,8 +20,8 @@ public class MarketController {
 
     @GetMapping("/market")
     public String showRegistrationForm(WebRequest request, Model model) throws JsonProcessingException {
-        model.addAttribute("model", model);
-        marketServiceDetails.getCountryProducts("co");
+        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
+        model.addAttribute("product", products);
         return "marketlist";
     }
 }

@@ -37,7 +37,7 @@ public class AccountController {
     public ModelAndView setAmountAccount(@ModelAttribute("accountDto") @Valid AccountDto accountDto) {
         accountservice.updateAcount(accountDto);
 
-        return new ModelAndView("successfull", "accounDto", accountDto);
+        return new ModelAndView("excelent", "accounDto", accountDto);
     }
 
 }

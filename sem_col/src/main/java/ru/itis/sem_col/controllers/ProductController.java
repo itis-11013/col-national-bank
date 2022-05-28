@@ -53,7 +53,7 @@ public class ProductController {
 
 
 
-        return new ModelAndView("successfull", "product", productDto);
+        return new ModelAndView("excelent", "product", productDto);
     }
 
 

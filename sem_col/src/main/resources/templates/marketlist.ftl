@@ -7,6 +7,14 @@
 </head>
 <body>
 <h1>market</h1>
+<div>
+    <label> Product : </label>
+    <select name="product" style="width:250px">
+        <#list product as category>
+            <option name="product" >${category.product.name}</option>
+        </#list>
+    </select>
+</div>
 
 </body>
 
