@@ -4,12 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 import ru.itis.sem_col.controllers.dto.AccountDto;
+import ru.itis.sem_col.controllers.dto.ProductDto;
 import ru.itis.sem_col.models.Account;
 import ru.itis.sem_col.models.Organization;
 import ru.itis.sem_col.services.AccountServiceImpl;
 import ru.itis.sem_col.services.OrganizationDetailService;
+
+import javax.validation.Valid;
 
 @Controller
 public class AccountController {
@@ -28,4 +33,11 @@ public class AccountController {
         model.addAttribute("accountDto", accountservice);
         return "account";
     }
+    @PostMapping("/account")
+    public ModelAndView setAmountAccount(@ModelAttribute("accountDto") @Valid AccountDto accountDto) {
+        accountservice.updateAcount(accountDto);
+
+        return new ModelAndView("successfull", "accounDto", accountDto);
+    }
+
 }
