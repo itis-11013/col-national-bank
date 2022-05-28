@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 import ru.itis.sem_col.models.Units;
 import ru.itis.sem_col.repositories.UnitsRepository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
+@Transactional
 public class UnitServiceImpl implements UnitService{
     @Autowired
     UnitsRepository unitsRepository;
@@ -15,4 +17,5 @@ public class UnitServiceImpl implements UnitService{
     public List<Units> listAllUnits() {
         return (List<Units>) unitsRepository.findAll();
     }
+
 }

@@ -1,6 +1,5 @@
 package ru.itis.sem_col.services;
 
-import ru.itis.sem_col.models.Organization;
 import ru.itis.sem_col.models.ProductCatalog;
 
 import java.util.List;
