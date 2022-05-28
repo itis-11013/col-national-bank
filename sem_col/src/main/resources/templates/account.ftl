@@ -8,5 +8,9 @@
         <span> Currency : ${account.currency}</span>
         <span> Amount : ${account.amount}</span>
     </div>
+    <div>
+        <label>Add money</label>
+        <input type="number" name="amount" placeholder="amount" id="amount" style="-moz-appearance: textfield">
+    </div>
 
 </@c.page>
