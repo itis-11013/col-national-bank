@@ -50,9 +50,6 @@ public class ProductController {
     public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid ProductDto productDto) throws JsonProcessingException {
         productService.registerNewProduct(productDto);
 
-
-
-
         return new ModelAndView("excelent", "product", productDto);
     }
 

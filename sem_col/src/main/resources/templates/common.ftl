@@ -28,6 +28,9 @@
                         <a class="nav-link" href="/product/add">Create Product</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="/market">Market</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="/logout">out</a>
                     </li>
                 </ul>
