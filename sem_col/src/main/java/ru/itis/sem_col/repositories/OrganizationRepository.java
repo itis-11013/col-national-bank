@@ -9,4 +9,5 @@ import java.util.UUID;
 public interface OrganizationRepository extends CrudRepository<Organization, InnerOrganization> {
     Organization findByName(String name);
     Organization findByInnerId(UUID uuid);
+    Organization findById(Long id);
 }

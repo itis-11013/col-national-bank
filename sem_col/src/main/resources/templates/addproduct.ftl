@@ -1,5 +1,6 @@
-<#import "common.ftl" as c>
-<@c.page>
+<#include 'common.ftl'>
+
+<@page>
 <h>REGISTER PRODUCT</h>
 <div class="__login">
     <div class="login_form">
@@ -29,8 +30,10 @@
                 <label>Price</label>
                 <input type="number" name="price" placeholder="quantity" id="quantity" style="-moz-appearance: textfield">
             </div>
-            <div><input class="field" type="submit" value="add"/></div>
+            <div>
+                <input class="field" type="submit" value="add" />
+            </div>
         </form>
     </div>
 </div>
-</@c.page>
+</@page>

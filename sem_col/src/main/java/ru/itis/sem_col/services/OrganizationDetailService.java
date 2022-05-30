@@ -39,7 +39,7 @@ public class OrganizationDetailService implements IOrgService{
     @Autowired
     private NationalBankRepository nationalBankRepository;
 
-    Organization organization = new Organization();
+    public Organization organization = new Organization();
     @Override
     public Organization registerNewOrganization(RegisterOrganizationDto organizationDto) throws JsonProcessingException {
         //get data from server

@@ -1,13 +1,14 @@
-<#import "common.ftl" as c>
-<@c.page>
+
+<#include 'common.ftl'>
+
+<@page>
+
     <section style="background-color: #eee;">
         <div class="container py-5">
             <div class="row">
                 <div class="col">
                     <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
                         <ol class="breadcrumb mb-0">
-<#--                            <li class="breadcrumb-item"><a href="#">Home</a></li>-->
-<#--                            <li class="breadcrumb-item"><a href="#">User</a></li>-->
                             <li class="breadcrumb-item active" aria-current="page">My Profile Organization</li>
                         </ol>
                     </nav>
@@ -68,7 +69,7 @@
                                     <p class="mb-0">Address</p>
                                 </div>
                                 <div class="col-sm-9">
-                                    <p class="text-muted mb-0">${organization.address}</p>
+                                    <p class="text-muted mb-0">${organization.name}</p>
                                 </div>
                             </div>
                         </div>
@@ -78,4 +79,4 @@
         </div>
     </section>
 
-</@c.page>
+</@page>

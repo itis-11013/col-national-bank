@@ -51,7 +51,7 @@
         <label> Product : </label>
         <select name="product" style="width:250px">
             <#list product as category>
-                <option name="product" >${category.product.name}</option>
+                <option name="product" value="${category.product.id}" >${category.product.name}</option>
             </#list>
         </select>
     </div>

@@ -15,7 +15,7 @@ public class AccountServiceImpl implements AccountService{
     @Autowired
     AccountRepository repositoryaccount;
     @Autowired
-    private OrganizationDetailService organizationDetailService;
+    public OrganizationDetailService organizationDetailService;
 
     @Override
     public Account find_by_organization_id(Long IdOrganization) {

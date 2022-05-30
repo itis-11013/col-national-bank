@@ -9,7 +9,7 @@ import java.util.Collection;
 
 public class OrganizationDetailImple implements UserDetails {
 
-    private Organization organization;
+    public Organization organization;
 
     public OrganizationDetailImple(Organization organization) {
         this.organization = organization;
