@@ -2,6 +2,7 @@ package ru.itis.sem_col.controllers;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -16,7 +17,7 @@ import ru.itis.sem_col.services.ContractServiceDetails;
 
 import javax.validation.Valid;
 import java.util.List;
-
+@Controller
 public class ContractController {
 
     @Autowired
