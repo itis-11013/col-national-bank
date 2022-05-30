@@ -1,7 +1,16 @@
 <#include 'common.ftl'>
 
 <@page>
-<h>REGISTER PRODUCT</h>
+<div class="container py-5">
+<div class="row">
+    <div class="col">
+        <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
+            <ol class="breadcrumb mb-0">
+                <h1 class="text-center">REGISTER PRODUCT</h1>
+            </ol>
+        </nav>
+    </div>
+</div>
 <div class="__login">
     <div class="login_form">
         <form action="/product/add" method="post">
@@ -35,5 +44,5 @@
             </div>
         </form>
     </div>
-</div>
+</div></div>
 </@page>

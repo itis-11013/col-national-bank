@@ -15,6 +15,11 @@
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/ProductRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketServiceDetails.java" afterDir="false" />
+
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/account.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/account.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/addproduct.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/addproduct.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,30 +187,10 @@
     <configuration name="SemColApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="sem_col" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.itis.sem_col.SemColApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ServerRunner" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="sem_col" />
-      <projectPathOnTarget name="projectPathOnTarget" value="bankcol" />
-      <target name="bankcol@188.93.211.195:22" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="ru.itis.sem_col.SemColApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.GetOrganizationTest" />
-      <item itemvalue="Application.OrganizationTest" />
-      <item itemvalue="Application.PostCreateBank" />
-      <item itemvalue="Application.proberequest" />
-      <item itemvalue="Application.RequestBankTest" />
-      <item itemvalue="Spring Boot.SemColApplication" />
-      <item itemvalue="Spring Boot.ServerRunner" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PostCreateBank" />
