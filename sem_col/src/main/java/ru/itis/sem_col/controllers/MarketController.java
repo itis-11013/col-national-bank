@@ -16,6 +16,7 @@ import ru.itis.sem_col.services.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Objects;
 
 @Controller
 public class MarketController {
@@ -37,11 +38,17 @@ public class MarketController {
         List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
         model.addAttribute("product", products);
 
+        for (ProductDto a : products) {
+            System.out.println(a.getOrganization());
+        }
+
         return "marketlist";
     }
     @PostMapping("/market")
     public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid ProductDto productDto) throws JsonProcessingException {
-        System.out.println(productDto.getProduct().getId());
+        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
+        System.out.println(productDto.getInnerID());
+
         contractServiceDetails.addNewContract(productDto.getInnerID(), productDto.getCount());
         return new ModelAndView("excelent", "product", productDto);
     }

@@ -14,6 +14,7 @@
     <table class="table table-striped table-hover">
         <thead>
         <tr>
+            <th scope="col">Inner Id</th>
             <th scope="col">Code</th>
             <th scope="col">Product</th>
             <th scope="col">Units</th>
@@ -24,6 +25,7 @@
         <tbody>
         <#foreach category in product>
         <tr>
+            <td>${category.innerID}</td>
             <td>${category.product.code}</td>
             <td>${category.product.name}</td>
             <td>${category.units.type}</td>
@@ -54,6 +56,10 @@
                 <option name="product" value="${category.product.id}" >${category.product.name}</option>
             </#list>
         </select>
+    </div>
+    <div>
+        <label> inner id : </label>
+        <input type="UUID" name="innerID" placeholder="innerID" id="innerID">
     </div>
     <div>
         <label>Quantity</label>

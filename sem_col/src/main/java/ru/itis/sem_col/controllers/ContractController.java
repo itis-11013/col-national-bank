@@ -28,7 +28,7 @@ public class ContractController {
         List<Contract> contracts = contractServiceDetails.getAllContracts();
 
         model.addAttribute("contracts", contracts );
-        return "contracts2";
+        return "contracts";
     }
 
 }

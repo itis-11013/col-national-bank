@@ -56,22 +56,23 @@ public class ContractServiceDetails implements ContractService{
                 restTemplate.postForObject(url, request, String.class);
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode root = objectMapper.readTree(personResultAsJsonStr);
-        JsonNode innerId = root.path("innerid");
-        System.out.println("InnerID New Contract in Server: "+ innerId);
-        UUID uuid = UUID.fromString(innerId.asText());
-        LocalDateTime contractDate = LocalDateTime.parse(root.path("createdAt").asText());
+        JsonNode data = root.path("data");
+        System.out.println("InnerID New Contract in Server: "+ data.path("contractid"));
+        UUID uuid = UUID.fromString(data.path("contractid").asText());
+        String datefromsever = data.path("createdAt").asText();
+        datefromsever = datefromsever.substring(0,18);
+        LocalDateTime dateTime = LocalDateTime.parse(datefromsever);
         //LocalDateTime paymentDate = LocalDateTime.parse(root.path("");
         contract.setInnerId(uuid);
-        contract.setContractDate(contractDate);
+        contract.setContractDate(dateTime);
         //contract.setCount(root.path("count").asDouble());
-        contract.setDeleted(root.path("isPaid").asBoolean());
-        JsonNode data = root.path("data");
+        contract.setDeleted(data.path("isPaid").asBoolean());
 
         contract.setCount(data.path("count").asDouble());
         contract.setProduct(productRepository.findByInnerId(productUUID));
         contract.setBuyer(organizationDetailService.getOrganization());
-        contract.setDeliveryDate(contractDate);
-        contract.setPaymentDate(contractDate);
-        return null;
+        contract.setDeliveryDate(dateTime);
+        contract.setPaymentDate(dateTime);
+        return contract;
     }
 }
