@@ -7,6 +7,7 @@ import ru.itis.sem_col.models.composite.InnerOrganization;
 import javax.persistence.*;
 
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -37,7 +38,7 @@ public class Organization {
     @OneToMany(mappedBy="organization", cascade = CascadeType.PERSIST, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Account> accounts;
     
-    @OneToMany(mappedBy = "organization", cascade = CascadeType.PERSIST, orphanRemoval = true)
-    private List<Product> products;
+    @OneToMany(mappedBy = "organization", cascade = CascadeType.PERSIST, orphanRemoval = true, fetch = FetchType.EAGER)
+    private Set<Product> products;
 
 }

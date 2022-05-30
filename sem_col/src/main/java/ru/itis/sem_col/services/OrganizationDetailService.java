@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import ru.itis.sem_col.controllers.dto.RegisterOrganizationDto;
@@ -21,6 +22,7 @@ import ru.itis.sem_col.repositories.NationalBankRepository;
 import ru.itis.sem_col.repositories.OrganizationRepository;
 
 import javax.transaction.Transactional;
+import java.util.Iterator;
 import java.util.UUID;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -93,5 +95,31 @@ public class OrganizationDetailService implements IOrgService{
     public void setOrganization(Organization organization) {
         System.out.println(organization.getName() + organization.getAddress() + organization.getCountry() );
         this.organization = organization;
+    }
+    public void updateOrganizations() throws JsonProcessingException {
+        RestTemplate restTemplate = new RestTemplate();
+        String fooResourceUrl
+                = "http://188.93.211.195/central/organization";
+        ResponseEntity<String> response
+                = restTemplate.getForEntity(fooResourceUrl + "", String.class);
+        //System.out.println(response);
+        ObjectMapper mapper =  new ObjectMapper();
+        JsonNode root = mapper.readTree(response.getBody());
+        JsonNode data = root.path("data");
+        Iterator<JsonNode> iterator = data.elements();
+        while (iterator.hasNext()){
+            Organization organization = new Organization();
+            JsonNode temp = iterator.next();
+            organization.setName(temp.path("name").asText());
+            organization.setAddress(temp.path("address").asText());
+            organization.setInnerId(UUID.fromString(temp.path("innerid").asText()));
+            organization.setCountry(countryRepository.findByCode(temp.path("country_code").asText()));
+            try {
+                UUID uuid1 = organizationRepository.findByInnerId(UUID.fromString(temp.path("innerid").asText())).getInnerId();
+                System.out.println(uuid1.toString());
+            }catch (Exception e){
+                organizationRepository.save(organization);
+            }
+        }
     }
 }

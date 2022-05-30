@@ -33,6 +33,9 @@ public class ContractServiceDetails implements ContractService{
 
     @Autowired
     ProductRepository productRepository;
+
+    @Autowired
+    ContractRepository contractRepository;
     @Override
     public List<Contract> getAllContracts() {
 
@@ -72,6 +75,8 @@ public class ContractServiceDetails implements ContractService{
         contract.setDeleted(data.path("isPaid").asBoolean());
 
         contract.setCount(data.path("count").asDouble());
+        Product product = productRepository.findByInnerId(productUUID);
+        System.out.println(product.getInnerId());
         contract.setProduct(productRepository.findByInnerId(productUUID));
         contract.setBuyer(organizationDetailService.getOrganization());
         contract.setDeliveryDate(dateTime);

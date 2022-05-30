@@ -11,8 +11,6 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import ru.itis.sem_col.controllers.dto.ProductDto;
-import ru.itis.sem_col.models.Organization;
-import ru.itis.sem_col.models.Product;
 import ru.itis.sem_col.repositories.ProductRepository;
 
 import javax.transaction.Transactional;
@@ -30,8 +28,8 @@ public class ProductServiceImpl implements ProductService{
     ProductRepository productRepository;
 
     @Override
-    public Product registerNewProduct(ProductDto productDto) throws JsonProcessingException {
-        Product product = new Product();
+    public ru.itis.sem_col.models.Product registerNewProduct(ProductDto productDto) throws JsonProcessingException {
+        ru.itis.sem_col.models.Product product = new ru.itis.sem_col.models.Product();
         product.setOrganization(organizationDetailService.getOrganization());
 
         product.setPrice(productDto.getPrice());

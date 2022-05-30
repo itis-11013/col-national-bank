@@ -8,11 +8,11 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import ru.itis.sem_col.controllers.dto.ProductDto;
-import ru.itis.sem_col.models.Product;
 import ru.itis.sem_col.repositories.OrganizationRepository;
 import ru.itis.sem_col.repositories.ProductCatalogRepository;
+import ru.itis.sem_col.repositories.ProductRepository;
 import ru.itis.sem_col.repositories.UnitsRepository;
-
+import ru.itis.sem_col.models.Product;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -31,6 +31,9 @@ public class MarketServiceDetails implements MarketService{
     @Autowired
     OrganizationRepository organizationRepository;
 
+    @Autowired
+    ProductRepository productRepository;
+
     @Override
     public List<ProductDto> getCountryProducts(String country) throws JsonProcessingException {
         List<ProductDto> allProducts = new ArrayList<>();
@@ -46,17 +49,34 @@ public class MarketServiceDetails implements MarketService{
         JsonNode content = data.path("content");
         Iterator<JsonNode> iterador = content.elements();
         while (iterador.hasNext()){
-            ProductDto tempProduct = new ProductDto();
+            ProductDto tempProductDto = new ProductDto();
+            Product tempProduct = new Product();
             JsonNode temp = iterador.next();
-            UUID uuid = UUID.fromString(temp.path("sellerid").asText());
-            tempProduct.setProduct(productCatalogRepository.findByName(temp.path("name").asText()).get(0));
-            tempProduct.setCount(temp.path("count").asInt());
+            tempProductDto.setPrice(temp.path("price").asLong());//
             tempProduct.setPrice(temp.path("price").asLong());
-            tempProduct.setUnits(unitsRepository.findByCode(temp.path("unit").asText()));
+
+            tempProductDto.setProduct(productCatalogRepository.findByName(temp.path("name").asText()).get(0));
+            tempProduct.setCatalog(productCatalogRepository.findByName(temp.path("name").asText()).get(0));
+
+            tempProductDto.setUnits(unitsRepository.findByCode(temp.path("unit").asText()));
+            tempProduct.setUnit(unitsRepository.findByCode(temp.path("unit").asText()));
+
+            tempProductDto.setCount(temp.path("count").asInt());//
+            tempProduct.setCount(temp.path("count").asInt());
+
+            UUID uuid = UUID.fromString(temp.path("sellerid").asText());
+            tempProductDto.setOrganization(organizationRepository.findByInnerId(uuid));//
             tempProduct.setOrganization(organizationRepository.findByInnerId(uuid));
-            tempProduct.setInnerID(UUID.fromString(temp.path("productid").asText()));
-            allProducts.add(tempProduct);
-            System.out.println(tempProduct);
+
+            tempProductDto.setInnerID(UUID.fromString(temp.path("productid").asText()));
+            tempProduct.setInnerId(UUID.fromString(temp.path("productid").asText()));
+
+            try {
+                UUID uuid1 = productRepository.findByInnerId(UUID.fromString(temp.path("innerid").asText())).getInnerId();
+            }catch (Exception e){
+                productRepository.save(tempProduct);
+            }
+            allProducts.add(tempProductDto);
         }
 
 

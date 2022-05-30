@@ -10,13 +10,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 import ru.itis.sem_col.controllers.dto.ProductDto;
-import ru.itis.sem_col.models.Product;
-import ru.itis.sem_col.models.ProductCatalog;
 import ru.itis.sem_col.services.*;
 
 import javax.validation.Valid;
 import java.util.List;
-import java.util.Objects;
 
 @Controller
 public class MarketController {
@@ -34,7 +31,7 @@ public class MarketController {
     ContractServiceDetails contractServiceDetails;
 
     @GetMapping("/market")
-    public String showRegistrationForm(WebRequest request, Model model) throws JsonProcessingException {
+    public String showProducts(WebRequest request, Model model) throws JsonProcessingException {
         List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
         model.addAttribute("product", products);
 
