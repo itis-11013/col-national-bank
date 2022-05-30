@@ -55,6 +55,10 @@
             </#list>
         </select>
     </div>
+    <div>
+        <label>Quantity</label>
+        <input type="number" name="count" placeholder="quantity" id="count">
+    </div>
     <div><input class="field" type="submit" value="buy"/></div>
     </form>
 </@c.page>
