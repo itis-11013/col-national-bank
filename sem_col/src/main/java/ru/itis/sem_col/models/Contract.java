@@ -22,27 +22,27 @@ public class Contract {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dictGen")
     @SequenceGenerator(name = "dictGen", sequenceName = "dictionary_seq", allocationSize = 1)
-    private Long id;
+    private Long id;//
 
     @Id
     @Basic(optional = true)
-    private UUID innerId;
+    private UUID innerId;//
 
     @CreationTimestamp
     @Column(updatable = false)
-    private LocalDateTime contractDate;
+    private LocalDateTime contractDate;//
 
-    private LocalDateTime paymentDate;
+    private LocalDateTime paymentDate;//
 
-    private Date deliveryDate;
+    private LocalDateTime deliveryDate;//
 
     @ManyToOne
-    private Product product;
+    private Product product;//
 
     @OneToOne
-    private Organization buyer;
+    private Organization buyer;//
 
-    private double count;
+    private double count;//
 
-    private boolean deleted = Boolean.FALSE;
+    private boolean deleted = Boolean.FALSE;//
 }

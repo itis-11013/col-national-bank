@@ -7,9 +7,12 @@ import ru.itis.sem_col.models.Organization;
 import ru.itis.sem_col.models.ProductCatalog;
 import ru.itis.sem_col.models.Units;
 
+import java.util.UUID;
+
 @Getter
 @Setter
 public class ProductDto {
+    private UUID innerID;
     private ProductCatalog product;
     private Units units;
     @NotNull
