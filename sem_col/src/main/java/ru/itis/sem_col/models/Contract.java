@@ -12,9 +12,6 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "contract")
-@NoArgsConstructor
-@AllArgsConstructor
-@Builder
 @Getter
 @Setter
 @IdClass(InnerContract.class)
@@ -36,7 +33,11 @@ public class Contract {
 
     private LocalDateTime deliveryDate;//
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumns({
+            @JoinColumn(name ="Product_ID"),
+            @JoinColumn(name = "Product_UUID")
+    })
     private Product product;//
 
     @OneToOne

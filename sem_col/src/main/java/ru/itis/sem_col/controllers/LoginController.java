@@ -1,6 +1,7 @@
 package ru.itis.sem_col.controllers;
 
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,20 +19,21 @@ public class LoginController {
 
 
 
-    @Autowired
-    private OrganizationRepository repository;
+   @Autowired
+   OrganizationDetailService organizationDetailService;
 
 
     @GetMapping("/login")
-    public String loginPage(Model model) {
+    public String loginPage(Model model) throws JsonProcessingException {
         System.out.println(model);
+
         return "loginform";
 
     }
 
     @PostMapping("/usercheck")
-    public String loginForm(HttpServletRequest request, Model model, LoginFormDto form) {
-
+    public String loginForm(HttpServletRequest request, Model model, LoginFormDto form) throws JsonProcessingException {
+        organizationDetailService.updateOrganizations();
         System.out.println(form.getName() + "--------------");
         try {
             request.login(form.getName(), form.getPassword());

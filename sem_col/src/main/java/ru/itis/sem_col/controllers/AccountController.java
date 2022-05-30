@@ -6,7 +6,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import ru.itis.sem_col.controllers.dto.AccountDto;
-import ru.itis.sem_col.controllers.dto.ProductDto;
 import ru.itis.sem_col.models.Account;
 import ru.itis.sem_col.models.Organization;
 import ru.itis.sem_col.services.AccountServiceImpl;

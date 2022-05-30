@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import ru.itis.sem_col.models.Contract;
 import ru.itis.sem_col.models.Product;
+import ru.itis.sem_col.repositories.ContractRepository;
 import ru.itis.sem_col.repositories.ProductRepository;
 
 import javax.transaction.Transactional;
@@ -30,6 +31,9 @@ public class ContractServiceDetails implements ContractService{
 
     @Autowired
     ProductRepository productRepository;
+
+    @Autowired
+    ContractRepository contractRepository;
     @Override
     public List<Contract> getAllContracts() {
 
@@ -60,7 +64,7 @@ public class ContractServiceDetails implements ContractService{
         System.out.println("InnerID New Contract in Server: "+ data.path("contractid"));
         UUID uuid = UUID.fromString(data.path("contractid").asText());
         String datefromsever = data.path("createdAt").asText();
-        datefromsever = datefromsever.substring(0,18);
+        datefromsever = datefromsever.substring(0,19);
         LocalDateTime dateTime = LocalDateTime.parse(datefromsever);
         //LocalDateTime paymentDate = LocalDateTime.parse(root.path("");
         contract.setInnerId(uuid);
@@ -69,10 +73,13 @@ public class ContractServiceDetails implements ContractService{
         contract.setDeleted(data.path("isPaid").asBoolean());
 
         contract.setCount(data.path("count").asDouble());
+        Product product = productRepository.findByInnerId(productUUID);
+        System.out.println(product.getInnerId());
         contract.setProduct(productRepository.findByInnerId(productUUID));
         contract.setBuyer(organizationDetailService.getOrganization());
         contract.setDeliveryDate(dateTime);
         contract.setPaymentDate(dateTime);
+        contractRepository.save(contract);
         return contract;
     }
 }
