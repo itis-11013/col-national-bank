@@ -54,6 +54,7 @@ public class MarketServiceDetails implements MarketService{
             tempProduct.setPrice(temp.path("price").asLong());
             tempProduct.setUnits(unitsRepository.findByCode(temp.path("unit").asText()));
             tempProduct.setOrganization(organizationRepository.findByInnerId(uuid));
+            tempProduct.setInnerID(UUID.fromString(temp.path("productid").asText()));
             allProducts.add(tempProduct);
             System.out.println(tempProduct);
         }
