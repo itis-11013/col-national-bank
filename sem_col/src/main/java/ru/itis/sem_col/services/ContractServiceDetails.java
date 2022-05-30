@@ -28,6 +28,8 @@ import java.util.UUID;
 public class ContractServiceDetails implements ContractService{
     @Autowired
     OrganizationDetailService organizationDetailService;
+    @Autowired
+    ContractRepository contractRepository;
 
     @Autowired
     ProductRepository productRepository;
@@ -37,7 +39,7 @@ public class ContractServiceDetails implements ContractService{
     @Override
     public List<Contract> getAllContracts() {
 
-
+        
 
         return null;
     }
