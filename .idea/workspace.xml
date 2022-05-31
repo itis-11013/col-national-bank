@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="contract in bd">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/ContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/ContractRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" afterDir="false" />
     <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +32,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="kevinchanges" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -221,6 +227,7 @@
       <workItem from="1653135682057" duration="676000" />
       <workItem from="1653891480400" duration="6115000" />
       <workItem from="1653897965667" duration="4490000" />
+      <workItem from="1654023730956" duration="6706000" />
       <workItem from="1654022836402" duration="6566000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
@@ -286,6 +293,28 @@
       <option name="project" value="LOCAL" />
       <updated>1653893231339</updated>
     </task>
+    <task id="LOCAL-00010" summary="fixed market product ID">
+      <created>1653981945636</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1653981945636</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed market product ID">
+      <created>1654023752807</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1654023752807</updated>
+    </task>
+    <task id="LOCAL-00012" summary="contract in bd">
+      <created>1654027417509</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1654027417510</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
@@ -322,6 +351,7 @@
     <MESSAGE value="fixed classnames" />
     <MESSAGE value="query limit 2000 added in Product catalog" />
     <MESSAGE value="fixed market product ID" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed market product ID" />
+    <MESSAGE value="contract in bd" />
+    <option name="LAST_COMMIT_MESSAGE" value="contract in bd" />
   </component>
 </project>

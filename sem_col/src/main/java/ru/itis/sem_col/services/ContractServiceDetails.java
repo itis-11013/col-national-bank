@@ -40,7 +40,7 @@ public class ContractServiceDetails implements ContractService{
     public List<Contract> getAllContracts() throws JsonProcessingException {
         //contracts in bd
         List<Contract> contracts= contractRepository.getContracts();
-        //contrats in context organization
+        //contracts in context organization
         List<Contract> contractOrg =  new ArrayList<>();
 
         for (Contract c: contracts) {
@@ -53,12 +53,35 @@ public class ContractServiceDetails implements ContractService{
             JsonNode data = root.path("data");
             JsonNode buyer = data.path("buyer");
             JsonNode innerid = buyer.path("innerid");
+            if(data.path("isPaid").asBoolean()){
+                c.setDeleted(true);
+                String datepay = data.path("paymentDate").asText().substring(0,19);
+                LocalDateTime dateTime = LocalDateTime.parse(datepay);
+                contractRepository.update(true, c.getInnerId(), dateTime);
+            }
+
             if (Objects.equals(innerid.asText(), organizationDetailService.getOrganization().getInnerId().toString())){
                 contractOrg.add(c);
             }
         }
         return contractOrg;
     }
+    public void payContract(Contract contract) throws JsonProcessingException {
+
+        Contract contractinbd = contractRepository.findByInnerId(contract.getInnerId());
+        String url = "http://188.93.211.195/central/payment";
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        JSONObject map = new JSONObject();
+        map.put("contractid", contract.getInnerId());
+        HttpEntity<String> request = new HttpEntity<String>(map.toString(), headers);
+        RestTemplate restTemplate = new RestTemplate();
+        String personResultAsJsonStr =
+                restTemplate.postForObject(url, request, String.class);
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode root = objectMapper.readTree(personResultAsJsonStr);
+        System.out.println(root);
+}
 
     @Override
     public Contract addNewContract(UUID productUUID, Integer count) throws JsonProcessingException {
