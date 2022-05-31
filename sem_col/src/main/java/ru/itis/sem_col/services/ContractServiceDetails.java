@@ -40,7 +40,7 @@ public class ContractServiceDetails implements ContractService{
     public List<Contract> getAllContracts() throws JsonProcessingException {
         //contracts in bd
         List<Contract> contracts= contractRepository.getContracts();
-        //contrats in context organization
+        //contracts in context organization
         List<Contract> contractOrg =  new ArrayList<>();
 
         for (Contract c: contracts) {
@@ -59,6 +59,19 @@ public class ContractServiceDetails implements ContractService{
         }
         return contractOrg;
     }
+    public void payContract(Contract contract) throws JsonProcessingException {
+
+        Contract contractinbd = contractRepository.findByInnerId(contract.getInnerId());
+        String url = "http://188.93.211.195/central/contract";
+        RestTemplate restTemplate = new RestTemplate();
+        String fooResourceUrl = "http://188.93.211.195/central/contract/" + contract.getInnerId().toString();
+        ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "", String.class);
+        ObjectMapper mapper =  new ObjectMapper();
+        JsonNode root = mapper.readTree(response.getBody());
+        JsonNode data = root.path("data");
+        JsonNode buyer = data.path("buyer");
+        JsonNode innerid = buyer.path("innerid");
+}
 
     @Override
     public Contract addNewContract(UUID productUUID, Integer count) throws JsonProcessingException {
