@@ -11,6 +11,7 @@
         </nav>
     </div>
 </div>
+
 <table class="table table-striped table-hover" style="color: black; background-color: aliceblue; border-radius: 5px">
     <thead>
     <tr>
