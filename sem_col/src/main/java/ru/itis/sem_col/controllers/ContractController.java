@@ -35,6 +35,8 @@ public class ContractController {
     public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid Contract contract) throws JsonProcessingException {
         contractServiceDetails.payContract(contract);
         System.out.println(contract.isDeleted());
+//        contract.setDeleted(true);
+        System.out.println(contract.getInnerId());
         return new ModelAndView("excelent", "contract", contract);
     }
 }

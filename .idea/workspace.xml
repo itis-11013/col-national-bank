@@ -9,6 +9,12 @@
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/ContractRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/ContractRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" afterDir="false" />
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +228,7 @@
       <workItem from="1653891480400" duration="6115000" />
       <workItem from="1653897965667" duration="4490000" />
       <workItem from="1654023730956" duration="6706000" />
+      <workItem from="1654022836402" duration="6566000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
@@ -308,6 +315,7 @@
       <updated>1654027417510</updated>
     </task>
     <option name="localTasksCounter" value="13" />
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
