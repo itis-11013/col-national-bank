@@ -1,4 +1,4 @@
 <#import "common.ftl" as c>
 <@c.page>
-    <h> Your operation was successfull </h>
+    <h style="color:aliceblue;">Operation was successfully </h>
 </@c.page>

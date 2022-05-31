@@ -19,7 +19,9 @@ import ru.itis.sem_col.repositories.ProductRepository;
 import javax.transaction.Transactional;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 
@@ -34,14 +36,28 @@ public class ContractServiceDetails implements ContractService{
     @Autowired
     ProductRepository productRepository;
 
-    @Autowired
-    ContractRepository contractRepository;
     @Override
-    public List<Contract> getAllContracts() {
+    public List<Contract> getAllContracts() throws JsonProcessingException {
+        //contracts in bd
+        List<Contract> contracts= contractRepository.getContracts();
+        //contrats in context organization
+        List<Contract> contractOrg =  new ArrayList<>();
 
-        
+        for (Contract c: contracts) {
 
-        return null;
+            RestTemplate restTemplate = new RestTemplate();
+            String fooResourceUrl = "http://188.93.211.195/central/contract/" + c.getInnerId().toString();
+            ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "", String.class);
+            ObjectMapper mapper =  new ObjectMapper();
+            JsonNode root = mapper.readTree(response.getBody());
+            JsonNode data = root.path("data");
+            JsonNode buyer = data.path("buyer");
+            JsonNode innerid = buyer.path("innerid");
+            if (Objects.equals(innerid.asText(), organizationDetailService.getOrganization().getInnerId().toString())){
+                contractOrg.add(c);
+            }
+        }
+        return contractOrg;
     }
 
     @Override

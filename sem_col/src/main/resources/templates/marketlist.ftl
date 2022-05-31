@@ -1,6 +1,5 @@
 <#import "common.ftl" as c>
 <@c.page>
-
     <div class="container py-5">
     <div class="row">
         <div class="col">
@@ -11,7 +10,7 @@
             </nav>
         </div>
     </div>
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover" style="color: black; background-color: aliceblue; border-radius: 5px">
         <thead>
         <tr>
             <th scope="col">Inner Id</th>
@@ -48,7 +47,7 @@
         </div>
     </div>
 
-    <form action="/market" method="post">
+    <form action="/market" method="post" style="color: aliceblue; inline-size: min-content">
     <div>
         <label> Product : </label>
         <select name="product" style="width:250px">
@@ -62,7 +61,7 @@
         <input type="UUID" name="innerID" placeholder="innerID" id="innerID">
     </div>
     <div>
-        <label>Quantity</label>
+        <label>Quantity:</label>
         <input type="number" name="count" placeholder="quantity" id="count">
     </div>
     <div><input class="field" type="submit" value="buy"/></div>

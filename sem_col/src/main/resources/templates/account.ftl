@@ -11,13 +11,13 @@
     </div>
 </div>
 
-    <div style="display: grid" >
+    <div style="display: grid; color: aliceblue" >
         <span> Name Organization : ${organization.name}</span>
         <span> Country : ${organization.country.name}</span>
         <span> Currency : ${account.currency}</span>
         <span> Amount : ${account.amount}</span>
     </div>
-    <form action="/account" method="post">
+    <form action="/account" method="post" style="color: aliceblue; white-space: pre-line">
     <div>
         <label>Add money</label>
         <input type="number" name="amount" placeholder="amount" id="amount" style="-moz-appearance: textfield">

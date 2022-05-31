@@ -3,8 +3,8 @@
 
 <@page>
 
-    <section style="background-color: #eee;">
-        <div class="container py-5">
+    <section style="background-color: transparent;">
+        <div class="container py-5" style="background-color: transparent; ">
             <div class="row">
                 <div class="col">
                     <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">

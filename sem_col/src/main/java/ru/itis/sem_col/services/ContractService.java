@@ -7,6 +7,6 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ContractService {
-    List<Contract> getAllContracts();
+    List<Contract> getAllContracts() throws JsonProcessingException;
     Contract addNewContract(UUID productUUID, Integer count) throws JsonProcessingException;
 }
