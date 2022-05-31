@@ -3,21 +3,20 @@ package ru.itis.sem_col.services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import ru.itis.sem_col.controllers.dto.ProductDto;
+import ru.itis.sem_col.models.Product;
 import ru.itis.sem_col.repositories.OrganizationRepository;
 import ru.itis.sem_col.repositories.ProductCatalogRepository;
 import ru.itis.sem_col.repositories.ProductRepository;
 import ru.itis.sem_col.repositories.UnitsRepository;
-import ru.itis.sem_col.models.Product;
+
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 @Transactional
@@ -33,6 +32,9 @@ public class MarketServiceDetails implements MarketService{
 
     @Autowired
     ProductRepository productRepository;
+
+    @Autowired
+    OrganizationDetailService organizationDetailService;
 
     @Override
     public List<ProductDto> getCountryProducts(String country) throws JsonProcessingException {
@@ -68,15 +70,21 @@ public class MarketServiceDetails implements MarketService{
             tempProductDto.setOrganization(organizationRepository.findByInnerId(uuid));//
             tempProduct.setOrganization(organizationRepository.findByInnerId(uuid));
 
-            tempProductDto.setInnerID(UUID.fromString(temp.path("productid").asText()));
-            tempProduct.setInnerId(UUID.fromString(temp.path("productid").asText()));
+            UUID productInnerId = UUID.fromString(temp.path("productid").asText());
+            tempProductDto.setInnerID(productInnerId);
+            tempProduct.setInnerId(productInnerId);
+
 
             try {
-                UUID uuid1 = productRepository.findByInnerId(UUID.fromString(temp.path("innerid").asText())).getInnerId();
+                UUID uuid1 = productRepository.findByInnerId(productInnerId).getInnerId();
+                System.out.println(uuid1.toString());
             }catch (Exception e){
                 productRepository.save(tempProduct);
             }
-            allProducts.add(tempProductDto);
+            if (!Objects.equals(organizationDetailService.getOrganization().getInnerId().toString(), uuid.toString())){
+                allProducts.add(tempProductDto);
+            }
+
         }
 
 

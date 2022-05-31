@@ -22,7 +22,6 @@ public class Contract {
     private Long id;//
 
     @Id
-    @Basic(optional = true)
     private UUID innerId;//
 
     @CreationTimestamp
@@ -35,8 +34,8 @@ public class Contract {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumns({
-            @JoinColumn(name ="Product_ID"),
-            @JoinColumn(name = "Product_UUID")
+            @JoinColumn(name ="product_ID"),
+            @JoinColumn(name = "product_UUID")
     })
     private Product product;//
 
