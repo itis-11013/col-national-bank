@@ -31,10 +31,10 @@ public class ContractController {
         model.addAttribute("contracts", contracts );
         return "contracts";
     }
-    @PostMapping("/payment")
+    @PostMapping("/payments")
     public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid Contract contract) throws JsonProcessingException {
-        contract.setDeleted(true);
-        System.out.println(contract.isDeleted());
+//        contract.setDeleted(true);
+        System.out.println(contract.getInnerId());
         return new ModelAndView("excelent", "contract", contract);
     }
 }

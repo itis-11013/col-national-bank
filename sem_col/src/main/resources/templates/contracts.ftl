@@ -29,11 +29,9 @@
             <td>${category.getProduct().getCatalog().name}</td>
             <td>${category.getProduct().price}</td>
             <td>${category.count}</td>
-            <td><#if !category.deleted>
-                    <button style="color: forestgreen; border: solid">Pay</button>
-                <#else>
-                    Already Payed
-                </#if></td>
+            <td><form action="/payments" method="post">
+                    <button type="submit" value="${category.innerId}" name="innerId" id="innerId" style="color: forestgreen; border: solid">Pay</button>
+                </form></td>
 
         </tr>
     </#foreach>
