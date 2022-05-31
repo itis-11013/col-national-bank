@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.ModelAndView;
 import ru.itis.sem_col.controllers.dto.ProductDto;
+import ru.itis.sem_col.models.Product;
 import ru.itis.sem_col.services.*;
 
 import javax.validation.Valid;
@@ -38,11 +39,13 @@ public class MarketController {
         return "marketlist";
     }
     @PostMapping("/market")
-    public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid ProductDto productDto) throws JsonProcessingException {
-        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
-        System.out.println(productDto.getInnerID());
+    public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid Product product) throws JsonProcessingException {
+//        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
+        System.out.println(product.getInnerId());
+        System.out.println(product.getCount());
 
-        contractServiceDetails.addNewContract(productDto.getInnerID(), productDto.getCount());
-        return new ModelAndView("excelent", "product", productDto);
+        contractServiceDetails.addNewContract(product.getInnerId(), product.getCount());
+//        return new ModelAndView("excelent", "product", productDto);
+            return new ModelAndView("excelent", "product", product);
     }
 }

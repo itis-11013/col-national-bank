@@ -32,7 +32,7 @@
                         <a class="nav-link" href="/market">Market</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/payments">Market</a>
+                        <a class="nav-link" href="/payments">Payments</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Log Out</a>
