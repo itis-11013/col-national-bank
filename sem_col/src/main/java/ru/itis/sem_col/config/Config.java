@@ -38,6 +38,7 @@ public class Config implements WebMvcConfigurer {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(getDataSource());
+
         em.setPersistenceProviderClass(HibernatePersistenceProvider.class);
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
 
