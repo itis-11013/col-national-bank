@@ -53,6 +53,13 @@ public class ContractServiceDetails implements ContractService{
             JsonNode data = root.path("data");
             JsonNode buyer = data.path("buyer");
             JsonNode innerid = buyer.path("innerid");
+            if(data.path("isPaid").asBoolean()){
+                c.setDeleted(true);
+                String datepay = data.path("paymentDate").asText().substring(0,19);
+                LocalDateTime dateTime = LocalDateTime.parse(datepay);
+                contractRepository.update(true, c.getInnerId(), dateTime);
+            }
+
             if (Objects.equals(innerid.asText(), organizationDetailService.getOrganization().getInnerId().toString())){
                 contractOrg.add(c);
             }
@@ -62,15 +69,18 @@ public class ContractServiceDetails implements ContractService{
     public void payContract(Contract contract) throws JsonProcessingException {
 
         Contract contractinbd = contractRepository.findByInnerId(contract.getInnerId());
-        String url = "http://188.93.211.195/central/contract";
+        String url = "http://188.93.211.195/central/payment";
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_JSON);
+        JSONObject map = new JSONObject();
+        map.put("contractid", contract.getInnerId());
+        HttpEntity<String> request = new HttpEntity<String>(map.toString(), headers);
         RestTemplate restTemplate = new RestTemplate();
-        String fooResourceUrl = "http://188.93.211.195/central/contract/" + contract.getInnerId().toString();
-        ResponseEntity<String> response = restTemplate.getForEntity(fooResourceUrl + "", String.class);
-        ObjectMapper mapper =  new ObjectMapper();
-        JsonNode root = mapper.readTree(response.getBody());
-        JsonNode data = root.path("data");
-        JsonNode buyer = data.path("buyer");
-        JsonNode innerid = buyer.path("innerid");
+        String personResultAsJsonStr =
+                restTemplate.postForObject(url, request, String.class);
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode root = objectMapper.readTree(personResultAsJsonStr);
+        System.out.println(root);
 }
 
     @Override
