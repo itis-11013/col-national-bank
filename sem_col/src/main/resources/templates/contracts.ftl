@@ -6,7 +6,7 @@
     <div class="col">
         <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
             <ol class="breadcrumb mb-0">
-                <h1 class="text-center">Contracts</h1>
+                <h1 class="text-center">Contracts</h1> 
             </ol>
         </nav>
     </div>
