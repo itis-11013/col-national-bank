@@ -35,10 +35,6 @@ public class MarketController {
         List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
         model.addAttribute("product", products);
 
-        for (ProductDto a : products) {
-            System.out.println(a.getOrganization());
-        }
-
         return "marketlist";
     }
     @PostMapping("/market")

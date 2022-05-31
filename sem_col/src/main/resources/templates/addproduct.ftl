@@ -11,11 +11,11 @@
         </nav>
     </div>
 </div>
-<div class="__login">
-    <div class="login_form">
-        <form action="/product/add" method="post">
+<div>
+    <div>
+        <form action="/product/add" method="post" style="color: aliceblue; inline-size: min-content">
             <div>
-                <label> units : </label>
+                <label> Units : </label>
                 <select name="units" style="width:250px">
                     <#list units as a>
                         <option name="units" value="${a.id}">${a.type}</option>
@@ -40,7 +40,7 @@
                 <input type="number" name="price" placeholder="quantity" id="quantity" style="-moz-appearance: textfield">
             </div>
             <div>
-                <input class="field" type="submit" value="add" />
+                <input class="field" type="submit" value="Add" />
             </div>
         </form>
     </div>

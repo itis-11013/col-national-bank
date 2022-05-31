@@ -11,28 +11,28 @@
         </nav>
     </div>
 </div>
-<table class="table table-striped table-hover">
+<table class="table table-striped table-hover" style="color: black; background-color: aliceblue; border-radius: 5px">
     <thead>
     <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Time of generate contract</th>
-        <th scope="col">Time of pay</th>
-        <th scope="col">Date</th>
+        <th scope="col">Generated</th>
         <th scope="col">Product</th>
         <th scope="col">Price</th>
         <th scope="col">Count</th>
+        <th scope="col">Payment</th>
     </tr>
     </thead>
     <tbody>
     <#foreach category in contracts>
         <tr>
-            <td>${category.id}</td>
             <td>${category.contractDate}</td>
-            <td>${category.units.paymentDate}</td>
-            <td>${category.deliveryDate}</td>
-            <td>${category.product.name}</td>
-            <td>${category.product.price}</td>
+            <td>${category.getProduct().getCatalog().name}</td>
+            <td>${category.getProduct().price}</td>
             <td>${category.count}</td>
+            <td><#if !category.deleted>
+                    <button style="color: forestgreen; border: solid">Pay</button>
+                <#else>
+                    Already Payed
+                </#if></td>
 
         </tr>
     </#foreach>

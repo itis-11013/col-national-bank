@@ -20,7 +20,6 @@ public class Product implements Serializable {
     private Long id;
 
     @Id
-    @Basic(optional = true)
     private UUID innerId;
 
 

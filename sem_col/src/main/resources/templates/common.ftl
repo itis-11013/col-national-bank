@@ -1,4 +1,5 @@
 <#macro page>
+    <link rel='stylesheet' href='/resources/css/global.css'>
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html>
@@ -31,7 +32,7 @@
                         <a class="nav-link" href="/market">Market</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">out</a>
+                        <a class="nav-link" href="/logout">Log Out</a>
                     </li>
                 </ul>
 <#--                <span class="navbar-text">-->
