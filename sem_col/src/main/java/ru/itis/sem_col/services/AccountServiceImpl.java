@@ -24,11 +24,10 @@ public class AccountServiceImpl implements AccountService{
     @Override
     public List<Account> contextAccount() {
         List <Account> accounts= organizationDetailService.getOrganization().getAccounts();
-        System.out.println(accounts.get(0).getAmount());
         return accounts;
     }
     @Override
-    public Account updateAcount(AccountDto AccountDto){
+    public Account updateAccount(AccountDto AccountDto){
         List <Account> accounts= organizationDetailService.getOrganization().getAccounts();
         Account account = accounts.get(0);
         account.setAmount(account.getAmount()+ AccountDto.getAmount());

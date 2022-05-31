@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import ru.itis.sem_col.models.Contract;
 import ru.itis.sem_col.models.Product;
+import ru.itis.sem_col.repositories.AccountRepository;
 import ru.itis.sem_col.repositories.ContractRepository;
 import ru.itis.sem_col.repositories.ProductRepository;
 
@@ -35,6 +36,8 @@ public class ContractServiceDetails implements ContractService{
 
     @Autowired
     ProductRepository productRepository;
+    @Autowired
+    AccountRepository accountRepository;
 
     @Override
     public List<Contract> getAllContracts() throws JsonProcessingException {
@@ -68,7 +71,6 @@ public class ContractServiceDetails implements ContractService{
     }
     public void payContract(Contract contract) throws JsonProcessingException {
 
-        Contract contractinbd = contractRepository.findByInnerId(contract.getInnerId());
         String url = "http://188.93.211.195/central/payment";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
@@ -80,7 +82,19 @@ public class ContractServiceDetails implements ContractService{
                 restTemplate.postForObject(url, request, String.class);
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode root = objectMapper.readTree(personResultAsJsonStr);
-        System.out.println(root);
+        //get contract/product from api
+
+        RestTemplate getrestTemplate = new RestTemplate();
+        String fooResourceUrl = "http://188.93.211.195/central/contract/" + contract.getInnerId().toString();
+        ResponseEntity<String> response = getrestTemplate.getForEntity(fooResourceUrl + "", String.class);
+        ObjectMapper mapper =  new ObjectMapper();
+        JsonNode getroot = mapper.readTree(response.getBody());
+        JsonNode data = getroot.path("data");
+        Double count = data.path("count").asDouble();
+        Double price = productRepository.findByInnerId(UUID.fromString(data.path("productid").asText())).getPrice().doubleValue();
+        Long total = Math.round(count*price);
+        System.out.println(total + "/count: " + count + " /price: " + price);
+        accountRepository.updateAmount(organizationDetailService.getOrganization().getAccounts().get(0).getAmount() - total, organizationDetailService.getOrganization());
 }
 
     @Override

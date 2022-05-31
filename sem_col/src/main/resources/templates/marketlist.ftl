@@ -33,9 +33,11 @@
             <td>${category.units.type}</td>
             <td>${category.count}</td>
             <td>${category.price}</td>
+
             <form action="/market" method="post">
                 <td> <input type="number" name="count" placeholder="quantity" id="count"></td>
             <td>
+
                     <button type="submit" value="${category.innerID}" name="innerId" id="innerId" style="color: forestgreen; border: solid">Pay</button>
                 </td></form>
 

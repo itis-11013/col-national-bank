@@ -35,7 +35,7 @@ public class Contract {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumns({
             @JoinColumn(name ="product_ID"),
-            @JoinColumn(name = "product_UUID")
+            @JoinColumn(name = "product_innerid")
     })
     private Product product;//
 

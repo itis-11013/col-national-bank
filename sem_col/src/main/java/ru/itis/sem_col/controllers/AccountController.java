@@ -32,7 +32,7 @@ public class AccountController {
     }
     @PostMapping("/account")
     public ModelAndView setAmountAccount(@ModelAttribute("accountDto") @Valid AccountDto accountDto) {
-        accountservice.updateAcount(accountDto);
+        accountservice.updateAccount(accountDto);
 
         return new ModelAndView("excelent", "accounDto", accountDto);
     }

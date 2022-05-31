@@ -19,7 +19,9 @@
         <th scope="col">Product</th>
         <th scope="col">Price</th>
         <th scope="col">Count</th>
+        <th scope="col">Payment Date</th>
         <th scope="col">Payment</th>
+
     </tr>
     </thead>
     <tbody>
@@ -29,9 +31,19 @@
             <td>${category.getProduct().getCatalog().name}</td>
             <td>${category.getProduct().price}</td>
             <td>${category.count}</td>
-            <td><form action="/payments" method="post">
-                    <button type="submit" value="${category.innerId}" name="innerId" id="innerId" style="color: forestgreen; border: solid">Pay</button>
-                </form></td>
+
+            <#if !category.deleted>
+                <td>-------</td>
+                <td><form action="/payments" method="post">
+                        <button type="submit" value="${category.innerId}" name="innerId" id="innerId" style="color: forestgreen; border: solid">Pay</button>
+                    </form>
+                </td>
+            <#else>
+                <td>${category.paymentDate}</td>
+                <td>Is Paid</td>
+            </#if>
+
+
 
         </tr>
     </#foreach>
