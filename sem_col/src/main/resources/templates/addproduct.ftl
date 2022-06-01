@@ -11,7 +11,7 @@
         </nav>
     </div>
 </div>
-<div>
+    <div>
     <div>
         <form action="/col/product/add" method="post" style="color: aliceblue; inline-size: min-content">
             <div>
@@ -43,6 +43,7 @@
                 <input class="field" type="submit" value="Add" />
             </div>
         </form>
+        <input type="button" id="display" value="Display Data">
     </div>
 </div></div>
 </@page>

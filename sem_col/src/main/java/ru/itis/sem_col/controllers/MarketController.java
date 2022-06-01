@@ -21,7 +21,7 @@ public class MarketController {
     @Autowired
     MarketServiceDetails marketServiceDetails;
     @Autowired
-    ProductCatalogCreateService catalogServiceimpl;
+    ProductCatalogService catalogServiceimpl;
 
     @Autowired
     UnitServiceImpl unitServiceImpl;

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import ru.itis.sem_col.controllers.dto.ProductDto;
 import ru.itis.sem_col.models.ProductCatalog;
 import ru.itis.sem_col.models.Units;
-import ru.itis.sem_col.services.ProductCatalogCreateService;
+import ru.itis.sem_col.services.ProductCatalogService;
 import ru.itis.sem_col.services.ProductServiceImpl;
 import ru.itis.sem_col.services.UnitServiceImpl;
 
@@ -22,7 +22,7 @@ import java.util.List;
 @Controller
 public class ProductController {
     @Autowired
-    ProductCatalogCreateService catalogServiceimpl;
+    ProductCatalogService catalogServiceimpl;
 
     @Autowired
     UnitServiceImpl unitServiceImpl;

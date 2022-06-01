@@ -10,10 +10,9 @@ import java.util.List;
 public interface ProductCatalogRepository extends CrudRepository <ProductCatalog, Long> {
     @Query("select m from ProductCatalog m where code like :code ||'%' ")
     List<ProductCatalog> findByCode(@Param("code")String code);
-    @Query("select m from ProductCatalog m where UPPER(name) like '%' ||  :name  ||'%'")
+    @Query("select m from ProductCatalog m where UPPER(name) like '%''%'")
     List<ProductCatalog> findByName(@Param("name") String name);
 
     @Query(value = "SELECT * FROM Product_Catalog LIMIT 2000", nativeQuery=true)
     List<ProductCatalog> findAlLimit();
-
 }
