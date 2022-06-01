@@ -4,19 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="">
+    <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="project 95%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ContractController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ContractController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Contract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/repositories/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/resources/css/register.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/account.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/account.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/addproduct.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/addproduct.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/app.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/app.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/contracts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/contracts.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/loginform.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/registerform.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/registerform.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,6 +232,7 @@
       <workItem from="1653897965667" duration="4490000" />
       <workItem from="1654023730956" duration="6706000" />
       <workItem from="1654022836402" duration="6566000" />
+      <workItem from="1654065696847" duration="4910000" />
     </task>
     <task id="LOCAL-00001" summary="Test createbank and getbanks API">
       <created>1652872959426</created>
@@ -295,12 +297,12 @@
       <option name="project" value="LOCAL" />
       <updated>1653893231339</updated>
     </task>
-    <task id="LOCAL-00010" summary="fixed market product ID">
-      <created>1653981945636</created>
+    <task id="LOCAL-00010" summary="project 95%">
+      <created>1654041131109</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1653981945636</updated>
+      <updated>1654041131109</updated>
     </task>
     <task id="LOCAL-00011" summary="fixed market product ID">
       <created>1654023752807</created>
@@ -316,7 +318,7 @@
       <option name="project" value="LOCAL" />
       <updated>1654027417510</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -353,6 +355,7 @@
     <MESSAGE value="query limit 2000 added in Product catalog" />
     <MESSAGE value="fixed market product ID" />
     <MESSAGE value="contract in bd" />
-    <option name="LAST_COMMIT_MESSAGE" value="contract in bd" />
+    <MESSAGE value="project 95%" />
+    <option name="LAST_COMMIT_MESSAGE" value="project 95%" />
   </component>
 </project>

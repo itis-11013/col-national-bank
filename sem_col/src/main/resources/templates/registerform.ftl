@@ -6,14 +6,14 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
 
-    <link rel='stylesheet' href='/resources/css/login.css'>
+    <link rel='stylesheet' href='/col/resources/css/login.css'>
     <#--    <script src='/resources/js/lab10.js'></script>-->
 
 </head>
 <body>
 
 <div id="register" class="show_form">
-    <form action="/register" method="post">
+    <form action="/col/register" method="post">
         <p style="color: aliceblue">Colombia's Bank</p>
         <div>
             <input class="field" name="name" placeholder="Organization's Name"/>
@@ -29,7 +29,7 @@
 
 </div>
 <div class="__container_org">
-    <a href="/login">
+    <a href="/col/login">
         <button class="__org_button">Go Back To Log In</button>
     </a>
 

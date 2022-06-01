@@ -1,5 +1,5 @@
 <#macro page>
-    <link rel='stylesheet' href='/resources/css/global.css'>
+    <link rel='stylesheet' href='/col/resources/css/global.css'>
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
             "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
     <html>
@@ -23,19 +23,19 @@
                         <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/account">Account</a>
+                        <a class="nav-link" href="/col/account">Account</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/product/add">Create Product</a>
+                        <a class="nav-link" href="/col/product/add">Create Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/market">Market</a>
+                        <a class="nav-link" href="/col/market">Market</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/payments">Payments</a>
+                        <a class="nav-link" href="/col/payments">Payments</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Log Out</a>
+                        <a class="nav-link" href="/col/logout">Log Out</a>
                     </li>
                 </ul>
 <#--                <span class="navbar-text">-->

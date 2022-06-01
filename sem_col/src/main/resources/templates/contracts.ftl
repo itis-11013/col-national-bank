@@ -34,7 +34,7 @@
 
             <#if !category.deleted>
                 <td>-------</td>
-                <td><form action="/payments" method="post">
+                <td><form action="/col/payments" method="post">
                         <button type="submit" value="${category.innerId}" name="innerId" id="innerId" style="color: forestgreen; border: solid">Pay</button>
                     </form>
                 </td>

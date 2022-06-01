@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Sign Up</title>
 
-    <link rel='stylesheet' href='/resources/css/register.css'>
+    <link rel='stylesheet' href='/col/resources/css/register.css'>
     <#--    <script src='/resources/js/lab10.js'></script>-->
 
 </head>

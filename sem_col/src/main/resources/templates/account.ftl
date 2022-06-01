@@ -17,7 +17,7 @@
         <span> Currency : ${account.currency}</span>
         <span> Amount : ${account.amount}</span>
     </div>
-    <form action="/account" method="post" style="color: aliceblue; white-space: pre-line">
+    <form action="/col/account" method="post" style="color: aliceblue; white-space: pre-line">
     <div>
         <label>Add money</label>
         <input type="number" name="amount" placeholder="amount" id="amount" style="-moz-appearance: textfield">

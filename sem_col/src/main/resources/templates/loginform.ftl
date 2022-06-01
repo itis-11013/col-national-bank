@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <title>Login</title>
     <link rel="icon" href="https://www.flaticon.com/free-icons/bank">
-    <link rel='stylesheet' href='/resources/css/login.css'>
+    <link rel='stylesheet' href='/col/resources/css/login.css'>
     <#--    <script src='/resources/js/lab10.js'></script>-->
     <script>
         function showPassword() {
@@ -24,7 +24,7 @@
 <body>
 <div class="__login">
         <div class="login_form">
-            <form action="/login" method="post">
+            <form action="/col/login" method="post">
                 <p style="color: aliceblue">Colombia's Bank</p>
                 <div><input class="field" name="name" placeholder="Organization's Name"/></div>
                 <div>
@@ -36,7 +36,7 @@
 </div>
 <div class="__container_org">
     <p style="color: aliceblue">You Don't Have An Organization?</p>
-    <a href="/register">
+    <a href="/col/register">
         <button class="__org_button">Create Organization</button>
     </a>
 

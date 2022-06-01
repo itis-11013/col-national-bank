@@ -13,7 +13,7 @@
 </div>
 <div>
     <div>
-        <form action="/product/add" method="post" style="color: aliceblue; inline-size: min-content">
+        <form action="/col/product/add" method="post" style="color: aliceblue; inline-size: min-content">
             <div>
                 <label> Units : </label>
                 <select name="units" style="width:250px">
