@@ -29,7 +29,7 @@
                         <a class="nav-link" href="/col/product/add">Create Product</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/col/market">Market</a>
+                        <a class="nav-link" href="/col/newmerch">Market</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/col/payments">Payments</a>

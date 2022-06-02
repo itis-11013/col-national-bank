@@ -18,7 +18,7 @@ public class ContractHelperControler {
         //model.addAttribute("text", "111");
         return "marketlist";
     }
-        @PostMapping("/pp")
+        @PostMapping("/sendcontract")
         public ModelAndView registerUserAccount(@ModelAttribute("pruebaDto") @Valid ProductContractDto productcatalog) throws JsonProcessingException {
 //        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
         System.out.println(productcatalog.getMerch_id());

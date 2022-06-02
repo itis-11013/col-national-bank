@@ -96,7 +96,7 @@
 
     <div><span>Выбранный товар:</span>
 
-        <form action="/col/pp" method="post">
+        <form action="/col/sendcontract" method="post">
             <input type="hidden" id="merch_id" name="merch_id"></input>
             <label for="merch_code" > code :</label>
             <input type="text" id="merch_code" name="merch_code"></input>
