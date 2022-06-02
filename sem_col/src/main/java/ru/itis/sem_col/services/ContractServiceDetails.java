@@ -98,14 +98,14 @@ public class ContractServiceDetails implements ContractService{
 }
 
     @Override
-    public Contract addNewContract(UUID productUUID, Integer count) throws JsonProcessingException {
+    public Contract addNewContract(String productUUID, Integer count) throws JsonProcessingException {
         Contract contract = new Contract();
         //get data from server
         String url = "http://188.93.211.195/central/contract";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         JSONObject map = new JSONObject();
-        map.put("productid", productUUID.toString());
+        map.put("productid", productUUID);
         map.put("count", count);
         map.put("buyerid", organizationDetailService.getOrganization().getInnerId().toString());
         System.out.println(map);
@@ -128,9 +128,9 @@ public class ContractServiceDetails implements ContractService{
         contract.setDeleted(data.path("isPaid").asBoolean());
 
         contract.setCount(data.path("count").asDouble());
-        Product product = productRepository.findByInnerId(productUUID);
+        Product product = productRepository.findByInnerId(UUID.fromString(productUUID));
         System.out.println(product.getInnerId());
-        contract.setProduct(productRepository.findByInnerId(productUUID));
+        contract.setProduct(productRepository.findByInnerId(UUID.fromString(productUUID)));
         contract.setBuyer(organizationDetailService.getOrganization());
         contract.setDeliveryDate(dateTime);
         contract.setPaymentDate(dateTime);

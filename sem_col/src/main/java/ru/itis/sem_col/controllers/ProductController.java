@@ -18,6 +18,7 @@ import ru.itis.sem_col.services.UnitServiceImpl;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class ProductController {
@@ -33,7 +34,7 @@ public class ProductController {
     @GetMapping("/product/add")
     public String addProduct(WebRequest request, Model model) {
         ProductDto productDto = new ProductDto();
-        List<ProductCatalog> products = catalogServiceimpl.listAllProductCatalog();
+        List<ProductCatalog> products = catalogServiceimpl.ListAllProductCatalog();
         List<Units> units = unitServiceImpl.listAllUnits();
         model.addAttribute("product", products );
         model.addAttribute("units", units );

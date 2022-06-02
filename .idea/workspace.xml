@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="373efb4a-3eb1-479c-b0a3-1ffa75bc0c6f" name="Changes" comment="fixed market product ID">
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ContractHelperControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ContractHelperControler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/common.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketResponseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/ProductNotFound.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ContractHelperControler.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ContractHelperController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/MarketRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/CatalogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ContractServiceDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketServiceDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/MarketServiceDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductCatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/java/ru/itis/sem_col/services/ProductCatalogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/contracts.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/contracts.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/sem_col/src/main/resources/templates/marketlist.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-213.7172.25">
-    <data-source name="PostgreSQL - postgres@localhost" uuid="b824bbb8-88ee-4de8-97bc-9dbd9a853eb8">
+    <data-source name="postgres@localhost" uuid="2ed379bc-968a-4ce9-9f61-eced30cc0e27">
       <database-info product="PostgreSQL" version="13.6" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.3.3" dbms="POSTGRES" exact-version="13.6" exact-driver-version="42.3">
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>postgres</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="database" negative="1">
-            <node kind="schema" negative="1" />
+          <node negative="1">
+            <node kind="database" qname="semes_4">
+              <node kind="schema" negative="1" />
+            </node>
+            <node kind="database" qname="postgres">
+              <node kind="schema" qname="public" />
+            </node>
           </node>
         </introspection-scope>
       </schema-mapping>

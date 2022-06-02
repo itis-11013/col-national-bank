@@ -7,6 +7,7 @@ import ru.itis.sem_col.repositories.OrganizationRepository;
 import ru.itis.sem_col.repositories.ProductCatalogRepository;
 
 import java.util.List;
+import java.util.Set;
 
 @Service
 public class ProductCatalogService implements CatalogService{
@@ -25,11 +26,8 @@ public class ProductCatalogService implements CatalogService{
     public List<ProductCatalog> findByCode(String code) {
         return productCatalogRepository.findByCode(code);
     }
-
-    @Override
-    public List<ProductCatalog> listAllProductCatalog() {
+    public List<ProductCatalog> ListAllProductCatalog(){
         return productCatalogRepository.findAlLimit();
     }
-
 
 }

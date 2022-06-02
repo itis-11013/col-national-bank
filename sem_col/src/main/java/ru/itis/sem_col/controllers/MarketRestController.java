@@ -18,14 +18,4 @@ public class MarketRestController {
     public List<ProductCatalog> getAllMerch(@RequestParam("name") String name) {
         return catalogService.findByName(name);
     }
-
-//    @PostMapping("/merch")
-//    public ModelAndView registerUserAccount(@ModelAttribute("pruebaDto") @Valid PruebaDto productcatalog) throws JsonProcessingException {
-////        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
-//        System.out.println(productcatalog.getMerch_id());
-//
-//
-////        return new ModelAndView("excelent", "product", productDto);
-//        return new ModelAndView("excelent", "product", productcatalog);
-//    }
 }

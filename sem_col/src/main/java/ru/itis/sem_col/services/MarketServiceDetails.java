@@ -3,7 +3,6 @@ package ru.itis.sem_col.services;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -36,12 +35,15 @@ public class MarketServiceDetails implements MarketService{
     @Autowired
     OrganizationDetailService organizationDetailService;
 
+    @Autowired
+    ContractServiceDetails contractServiceDetails;
+
     @Override
-    public List<ProductDto> getCountryProducts(String country) throws JsonProcessingException {
+    public List<ProductDto> getProductsInMarket() throws JsonProcessingException {
         List<ProductDto> allProducts = new ArrayList<>();
         RestTemplate restTemplate = new RestTemplate();
         String fooResourceUrl
-                = "http://188.93.211.195/central/productlist?country=" + country;
+                = "http://188.93.211.195/central/productlist";
         ResponseEntity<String> response
                 = restTemplate.getForEntity(fooResourceUrl, String.class);
         System.out.println(response);
@@ -90,5 +92,30 @@ public class MarketServiceDetails implements MarketService{
 
 
         return allProducts;
+    }
+    public Boolean isProductInMarketSave(String code, Integer count) throws JsonProcessingException {
+
+
+        RestTemplate restTemplate = new RestTemplate();
+        String fooResourceUrl
+                = "http://188.93.211.195/central/productlist?code=" + code;
+        ResponseEntity<String> response
+                = restTemplate.getForEntity(fooResourceUrl, String.class);
+        System.out.println(response);
+        ObjectMapper mapper =  new ObjectMapper();
+        JsonNode root = mapper.readTree(response.getBody());
+        JsonNode data = root.path("data");
+        JsonNode content = data.path("content");
+
+        if (root.findValue("name") != null){
+            System.out.println(content.path("sellerid"));
+            if (!Objects.equals(content.path("sellerid").asText(), organizationDetailService.getOrganization().getInnerId().toString())){
+                contractServiceDetails.addNewContract(content.findValue("productid").asText(), count);
+            }
+            return true;
+        }else{
+            System.out.println("no esta en el mercado");
+            return false;
+        }
     }
 }

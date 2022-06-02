@@ -40,7 +40,7 @@
                 var cell2 = row.insertCell(-1);
                 cell2.innerHTML = result[j].name;
                 var cell3 = row.insertCell(-1);
-                cell3.innerHTML = "<button onclick='select_merch("+result[j].id +","+ result[j].code+")'>Выбрать</button>"
+                cell3.innerHTML = "<button onclick='select_merch("+result[j].id +","+ result[j].code+")' style='color: forestgreen; border: solid'>Выбрать</button>"
             }
         }
     </script>
@@ -81,33 +81,29 @@
 
 <#--        </tbody>-->
 <#--    </table>-->
-    <h1>Новый товар</h1>
+    <h1 style="color: aliceblue"></h1>
     <div>
-        <span>Наименование</span>
+        <span style="color: aliceblue">Наименование</span>
         <input id="name" type="text"/>
         <button onclick="search_merch()">Найти</button>
     </div>
     <div>
-        <table>
+        <table style="color: aliceblue; backdrop-filter: blur(20px)">
             <thead><th>Код</th><th>Наименование</th><th></th></thead>
             <tbody id="tbl_body"></tbody>
         </table>
     </div>
 
-    <div><span>Выбранный товар:</span>
+    <div><span style="color: aliceblue">Выбранный товар:</span>
 
-        <form action="/col/sendcontract" method="post">
-            <input type="hidden" id="merch_id" name="merch_id"></input>
+        <form action="/col/sendcontract" method="post" style="color: aliceblue">
+            <input type="hidden" id="merch_id" name="merch_id"/>
             <label for="merch_code" > code :</label>
-            <input type="text" id="merch_code" name="merch_code"></input>
+            <input type="text" id="merch_code" name="merch_code"/>
             <label for="count">count :</label>
-            <input type="number" id="count" name = "count"></input>
+            <input type="number" id="count" name = "count"/>
 
-
-<#--            <s id="merch_code"></s>&nbsp;-->
-<#--            <span id="merch_name"></span>-->
-
-                    <button type="submit" style="color: forestgreen; border: solid">Pay</button>
+                    <button type="submit" style="color: forestgreen; border: solid">Find In Market</button>
         </form>
     </div>
 
