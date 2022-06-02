@@ -19,6 +19,6 @@ public class ProductCatalog {
     private String code;
     private String name;
 
-    @OneToMany(mappedBy = "catalog")
-    private List<Product> products;
+//    @OneToMany(mappedBy = "catalog")
+//    private List<Product> products;
 }

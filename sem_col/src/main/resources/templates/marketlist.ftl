@@ -18,8 +18,9 @@
             while(tbody.rows.length > 0) {
                 tbody.deleteRow(0);
             }
-            document.getElementById("merch_id").innerHTML = id;
-            document.getElementById("merch_code").innerHTML = code;
+            document.getElementById("merch_id").value = id;
+            document.getElementById("merch_code").value = code;
+
         }
         async function search_merch() {
             //clear table
@@ -44,42 +45,42 @@
         }
     </script>
 
-    <table class="table table-striped table-hover" style="color: black; background-color: aliceblue; border-radius: 5px">
-        <thead>
-        <tr>
-            <th scope="col">Inner Id</th>
-            <th scope="col">Code</th>
-            <th scope="col">Product</th>
-            <th scope="col">Units</th>
-            <th scope="col">Count</th>
-            <th scope="col">Price</th>
-            <th scope="col">Count</th>
-            <th scope="col">Pay</th>
+<#--    <table class="table table-striped table-hover" style="color: black; background-color: aliceblue; border-radius: 5px">-->
+<#--        <thead>-->
+<#--        <tr>-->
+<#--            <th scope="col">Inner Id</th>-->
+<#--            <th scope="col">Code</th>-->
+<#--            <th scope="col">Product</th>-->
+<#--            <th scope="col">Units</th>-->
+<#--            <th scope="col">Count</th>-->
+<#--            <th scope="col">Price</th>-->
+<#--            <th scope="col">Count</th>-->
+<#--            <th scope="col">Pay</th>-->
 
-        </tr>
-        </thead>
-        <tbody>
-        <#foreach category in product>
-        <tr>
-            <td>${category.innerID}</td>
-            <td>${category.product.code}</td>
-            <td>${category.product.name}</td>
-            <td>${category.units.type}</td>
-            <td>${category.count}</td>
-            <td>${category.price}</td>
+<#--        </tr>-->
+<#--        </thead>-->
+<#--        <tbody>-->
+<#--        <#foreach category in product>-->
+<#--        <tr>-->
+<#--            <td>${category.innerID}</td>-->
+<#--            <td>${category.product.code}</td>-->
+<#--            <td>${category.product.name}</td>-->
+<#--            <td>${category.units.type}</td>-->
+<#--            <td>${category.count}</td>-->
+<#--            <td>${category.price}</td>-->
 
-            <form action="/col/market" method="post">
-                <td> <input type="number" name="count" placeholder="quantity" id="count"></td>
-            <td>
+<#--            <form action="/col/market" method="post">-->
+<#--                <td> <input type="number" name="count" placeholder="quantity" id="count"></td>-->
+<#--            <td>-->
 
-                    <button type="submit" value="${category.innerID}" name="innerId" id="innerId" style="color: forestgreen; border: solid">Pay</button>
-                </td></form>
+<#--                    <button type="submit" value="${category.innerID}" name="innerId" id="innerId" style="color: forestgreen; border: solid">Pay</button>-->
+<#--                </td></form>-->
 
-        </tr>
-        </#foreach>
+<#--        </tr>-->
+<#--        </#foreach>-->
 
-        </tbody>
-    </table>
+<#--        </tbody>-->
+<#--    </table>-->
     <h1>Новый товар</h1>
     <div>
         <span>Наименование</span>
@@ -94,9 +95,20 @@
     </div>
 
     <div><span>Выбранный товар:</span>
-        <span id="merch_id"></span>&nbsp;
-        <span id="merch_code"></span>&nbsp;
-        <span id="merch_name"></span>
+
+        <form action="/col/pp" method="post">
+            <input type="hidden" id="merch_id" name="merch_id"></input>
+            <label for="merch_code" > code :</label>
+            <input type="text" id="merch_code" name="merch_code"></input>
+            <label for="count">count :</label>
+            <input type="number" id="count" name = "count"></input>
+
+
+<#--            <s id="merch_code"></s>&nbsp;-->
+<#--            <span id="merch_name"></span>-->
+
+                    <button type="submit" style="color: forestgreen; border: solid">Pay</button>
+        </form>
     </div>
 
 <#--    <form action="/market" method="post" style="color: aliceblue; inline-size: min-content">-->

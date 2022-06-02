@@ -31,21 +31,21 @@ public class MarketController {
     @Autowired
     ContractServiceDetails contractServiceDetails;
 
-    @GetMapping("/market")
-    public String showProducts(WebRequest request, Model model) throws JsonProcessingException {
-        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
-        model.addAttribute("product", products);
-
-        return "marketlist";
-    }
-    @PostMapping("/market")
-    public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid Product product) throws JsonProcessingException {
+//    @GetMapping("/market")
+//    public String showProducts(WebRequest request, Model model) throws JsonProcessingException {
 //        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
-        System.out.println(product.getInnerId());
-        System.out.println(product.getCount());
-
-        contractServiceDetails.addNewContract(product.getInnerId(), product.getCount());
-//        return new ModelAndView("excelent", "product", productDto);
-            return new ModelAndView("excelent", "product", product);
-    }
+//        model.addAttribute("product", products);
+//
+//        return "marketlist";
+//    }
+//    @PostMapping("/market")
+//    public ModelAndView registerUserAccount(@ModelAttribute("product") @Valid Product product) throws JsonProcessingException {
+////        List<ProductDto> products = marketServiceDetails.getCountryProducts("co");
+//        System.out.println(product.getInnerId());
+//        System.out.println(product.getCount());
+//
+//        contractServiceDetails.addNewContract(product.getInnerId(), product.getCount());
+////        return new ModelAndView("excelent", "product", productDto);
+//            return new ModelAndView("excelent", "product", product);
+//    }
 }
